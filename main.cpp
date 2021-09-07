@@ -1,5 +1,6 @@
 #include <iostream>
 #include "ClientSocket.h"
+#include <QApplication>
 
 ClientSocket* clientSocket;
 
