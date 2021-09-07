@@ -4,7 +4,7 @@
 #include <QApplication>
 #include <QPushButton>
 #include <QGraphicsScene>
-#include "../Headers/KeyBindedRect.h"
+#include "../Headers/PlayerBar.h"
 #include <QGraphicsView>
 
 ClientSocket* clientSocket;
@@ -17,6 +17,8 @@ void * runClient(void *){
     }
     pthread_exit(NULL);
 }
+
+GameWindow * gameWindow;
 
 int main(int argc, char** argv) {
 
@@ -32,22 +34,11 @@ int main(int argc, char** argv) {
         cin >> msn;
         if (msn == "start") {
             cout << "Game start" << endl;
-            QApplication app(argc, argv); // todo esto hay que pasarlo a su propia funcion
-            QGraphicsScene * scene = new QGraphicsScene();
-            KeyBindedRect * rectItem = new KeyBindedRect();
-            rectItem->setRect(0,0,100,10);
-            scene->addItem(rectItem);// esto deberia hacerse cuando lo llama el server
-            // hacer que el item sea el focus, porque solo asi puede edtectar keybinds
-            rectItem->setFlag(QGraphicsItem::ItemIsFocusable);
-            rectItem->setFocus();
-            QGraphicsView * view = new QGraphicsView(scene);
-            view->show(); // invisible by default
+            QApplication app(argc, argv); //  esto hay que pasarlo a su propia funcion
 
-
-
-            //QPushButton button("Hello world !");
-            //button.show();
-            //GameWindow(app.);
+            gameWindow = new GameWindow();
+            gameWindow->show();
+            gameWindow->start();
 
             return app.exec();
         }

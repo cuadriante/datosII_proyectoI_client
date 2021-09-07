@@ -6,13 +6,18 @@
 #define DATOSII_PROYECTOI_CLIENT_GAMEWINDOW_H
 
 
-#include <QApplication>
-#include <QPushButton>
+#include <QGraphicsView>
+#include <QGraphicsScene>
 
-class GameWindow {
+class GameWindow: public QGraphicsView {
 
 public:
-    GameWindow(QApplication app);
+    //attributes
+    QGraphicsScene * scene;
+    // constructor
+    GameWindow(QWidget* parent=NULL);
+    void start();
+
 };
 
 
