@@ -21,19 +21,20 @@ int main(int argc, char** argv) {
     pthread_create(&clientThread, 0, runClient, NULL);
     pthread_detach(clientThread);
 
-    string json = "Holi desde el cliente."; // placeholder para el json que vamos a usar
+    string json = "hh"; // placeholder para el json que vamos a usar
 
     while(1){
         string msn;
         cin >> msn;
-        if (msn == "start") {
-            QApplication app(argc, argv);
-
-            QPushButton button("Hello world !");
-            button.show();
-
-            return app.exec();
-        }
+//        if (msn == "start") {
+//            cout << "Game start" << endl;
+//            QApplication app(argc, argv);
+//
+//            QPushButton button("Hello world !");
+//            button.show();
+//
+//            return app.exec();
+//        }
         if (msn == "exit"){
             break;
         }

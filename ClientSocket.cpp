@@ -52,7 +52,7 @@ void *ClientSocket::Controller(void *obj) {
             }
         }
         cout << message << endl;
-        close(clientSocket->descriptor);
-        pthread_exit(NULL);
     }
+    close(clientSocket->descriptor);
+    pthread_exit(NULL);
 }
