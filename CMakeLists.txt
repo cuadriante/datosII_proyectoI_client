@@ -11,7 +11,7 @@ find_package(Qt5 COMPONENTS Core Widgets REQUIRED)
 
 set(CMAKE_CXX_STANDARD 14)
 SET(CMAKE_CXX_FLAGS -pthread)
-add_executable(datosII_proyectoI_client main.cpp ClientSocket.cpp ClientSocket.h)
+add_executable(datosII_proyectoI_client main.cpp ClientSocket.cpp ClientSocket.h GameWindow.cpp GameWindow.h)
 
 # Link the library to the executable
 target_link_libraries(datosII_proyectoI_client Qt5::Core Qt5::Widgets)

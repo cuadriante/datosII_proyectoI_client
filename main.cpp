@@ -1,6 +1,7 @@
 #include <iostream>
 #include "ClientSocket.h"
 #include <QApplication>
+#include <QPushButton>
 
 ClientSocket* clientSocket;
 
@@ -13,7 +14,8 @@ void * runClient(void *){
     pthread_exit(NULL);
 }
 
-int main() {
+int main(int argc, char** argv) {
+
     clientSocket = new ClientSocket;
     pthread_t clientThread;
     pthread_create(&clientThread, 0, runClient, NULL);
@@ -24,6 +26,14 @@ int main() {
     while(1){
         string msn;
         cin >> msn;
+        if (msn == "start") {
+            QApplication app(argc, argv);
+
+            QPushButton button("Hello world !");
+            button.show();
+
+            return app.exec();
+        }
         if (msn == "exit"){
             break;
         }
