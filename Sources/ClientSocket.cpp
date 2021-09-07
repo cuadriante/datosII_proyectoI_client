@@ -2,7 +2,7 @@
 // Created by cuadriante on 3/9/21.
 //
 
-#include "ClientSocket.h"
+#include "../Headers/ClientSocket.h"
 
 ClientSocket::ClientSocket() {
 

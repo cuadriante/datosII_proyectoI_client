@@ -11,6 +11,8 @@
 
 class GameWindow {
 
+public:
+    GameWindow(QApplication app);
 };
 
 
