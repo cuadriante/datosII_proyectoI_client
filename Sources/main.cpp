@@ -32,22 +32,23 @@ int main(int argc, char** argv) {
     string json = "hh"; // placeholder para el json que vamos a usar
 
     while(1){
-        string msn = clientSocket->readMessage();
+        clientSocket->readMessage();
 //        string msn;
 //        cin >> msn;
-        if (msn == "start") {
-            cout << "Game start" << endl;
-            QApplication app(argc, argv); //  esto hay que pasarlo a su propia funcion
-
-            gameWindow = new GameWindow();
-            gameWindow->show();
-            gameWindow->start();
-
-            return app.exec();
-        }
-        if (msn == "exit"){
-            break;
-        }
+ //       cout << msn << endl;
+//        if (msn == "start") {
+//            cout << "Game start" << endl;
+//            QApplication app(argc, argv); //  esto hay que pasarlo a su propia funcion
+//
+//            gameWindow = new GameWindow();
+//            gameWindow->show();
+//            gameWindow->start();
+//
+//            return app.exec();
+//        }
+//        if (msn == "exit"){
+//            break;
+//        }
 //        clientSocket->sendMessage(json.c_str());
     }
     delete clientSocket;

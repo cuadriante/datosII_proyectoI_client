@@ -35,7 +35,10 @@ void ClientSocket::sendMessage(const char *msn) {
 
 string ClientSocket::readMessage() {
     char buffer[bufferSize] = {0};
-    read(descriptor, buffer, bufferSize);
+    int readSize = read(descriptor, buffer, bufferSize);
+    cout << "readsize: " << readSize << endl;
+    cout << "buffer" << buffer << endl;
+    cout << "message was read" << endl;
     return buffer;
 }
 
@@ -47,16 +50,17 @@ void *ClientSocket::Controller(void *obj) {
         char buffer[bufferSize] = {0}; //number to be defined
         // establecer condicion para cerrar el while
         while(1){
-            memset(buffer, 0, bufferSize);
-            int bytes = recv(clientSocket->descriptor, buffer, bufferSize, 0);
-            message.append(buffer, bytes);
-            if (bytes <= 0){ //reads message
-                close(clientSocket->descriptor);
-                pthread_exit(NULL);
-            }
-            if (bytes < bufferSize){ // stops reading
-                break;
-            }
+            clientSocket->readMessage();
+//            memset(buffer, 0, bufferSize);
+//            int bytes = recv(clientSocket->descriptor, buffer, bufferSize, 0);
+//            message.append(buffer, bytes);
+//            if (bytes <= 0){ //reads message
+//                close(clientSocket->descriptor);
+//                pthread_exit(NULL);
+//            }
+//            if (bytes < bufferSize){ // stops reading
+//                break;
+//            }
         }
         cout << message << endl;
     }
