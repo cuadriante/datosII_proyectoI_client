@@ -29,9 +29,16 @@ void ClientSocket::connectSocket() {
     pthread_detach(thread);
 }
 
-void ClientSocket::setMessage(const char *msn) {
+void ClientSocket::sendMessage(const char *msn) {
     send(descriptor, msn, strlen(msn), 0);
 }
+
+string ClientSocket::readMessage() {
+    char buffer[bufferSize] = {0};
+    read(descriptor, buffer, bufferSize);
+    return buffer;
+}
+
 
 void *ClientSocket::Controller(void *obj) {
     ClientSocket* clientSocket = (ClientSocket *)obj;

@@ -22,7 +22,9 @@ class ClientSocket {
 public:
     ClientSocket();
     void connectSocket();
-    void setMessage(const char* msn);
+    void sendMessage(const char* msn);
+
+    string readMessage();
 
 private:
     int descriptor;

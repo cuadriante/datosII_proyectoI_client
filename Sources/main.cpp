@@ -1,11 +1,13 @@
 #include <iostream>
+#include <sstream>
+#include <map>
+#include <boost/property_tree/ptree.hpp>
+#include <boost/property_tree//json_parser.hpp>
 #include "../Headers/ClientSocket.h"
 #include "../Headers/GameWindow.h"
 #include <QApplication>
 #include <QPushButton>
-#include <QGraphicsScene>
 #include "../Headers/PlayerBar.h"
-#include <QGraphicsView>
 
 ClientSocket* clientSocket;
 
@@ -30,8 +32,9 @@ int main(int argc, char** argv) {
     string json = "hh"; // placeholder para el json que vamos a usar
 
     while(1){
-        string msn;
-        cin >> msn;
+        string msn = clientSocket->readMessage();
+//        string msn;
+//        cin >> msn;
         if (msn == "start") {
             cout << "Game start" << endl;
             QApplication app(argc, argv); //  esto hay que pasarlo a su propia funcion
@@ -45,7 +48,7 @@ int main(int argc, char** argv) {
         if (msn == "exit"){
             break;
         }
-        clientSocket->setMessage(json.c_str());
+//        clientSocket->sendMessage(json.c_str());
     }
     delete clientSocket;
     return 0;
