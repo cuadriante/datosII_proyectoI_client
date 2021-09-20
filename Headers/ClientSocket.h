@@ -23,8 +23,8 @@ public:
     ClientSocket();
     void connectSocket();
     void sendMessage(const char* msn);
-
     string readMessage();
+    int getDescriptor;
 
 private:
     int descriptor;
