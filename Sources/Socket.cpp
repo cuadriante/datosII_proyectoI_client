@@ -3,6 +3,7 @@
 //
 
 #include "../Headers/Socket.h"
+#include "../Headers/Command.h"
 
 Socket::Socket(int socketId) {
     this->socketId = socketId;
@@ -48,4 +49,33 @@ ptree * Socket::readPtree() {
     return pt;
 
 }
+
+void Socket::sendCommand(Command &command) {
+    ptree * pt = new ptree();
+    pt->put("action", command.getAction());
+    pt->put("id", command.getId());
+    pt->put("posX", command.getPosX());
+    pt->put("posY", command.getPosY());
+    pt->put("type", command.getType());
+    pt->put("name", command.getName());
+    sendPtree(pt);
+}
+
+Command * Socket::readCommand(){
+    ptree * pt = readPtree();
+    if (pt == NULL){
+        //cout << "NUll pt" << endl;
+        return NULL;
+
+    }
+    Command * c = new Command();
+    c->setAction(pt->get<int>("action", 0));
+    c->setId(pt->get<int>("id", 0));
+    c->setPosX(pt->get<int>("posX", 0));
+    c->setPosY(pt->get<int>("posY", 0));
+    //c->setName(pt->get<string>("name", 0));
+    return c;
+}
+
+
 

@@ -16,6 +16,7 @@
 #include <unistd.h>
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree//json_parser.hpp>
+#include "Command.h"
 
 using namespace std;
 using boost::property_tree::ptree;
@@ -31,6 +32,8 @@ public:
     void sendMessage(string message);
     void sendPtree(ptree * ptree);
     ptree * readPtree();
+    void sendCommand(Command &command);
+    Command *readCommand();
 
 private:
     int descriptor; // se utiliza para identificar los sistemas
@@ -41,7 +44,6 @@ private:
     bool create_socket();
     bool bind_kernel(); //bind with port, establish maximum client quantity
     static void* ClientController(void*);
-
 
 };
 

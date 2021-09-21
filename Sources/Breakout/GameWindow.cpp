@@ -2,8 +2,8 @@
 // Created by cuadriante on 6/9/21.
 //
 
-#include "../Headers/GameWindow.h"
-#include "../Headers/PlayerBar.h"
+#include "../../Headers/GameWindow.h"
+#include "../../Headers/PlayerBar.h"
 
 
 GameWindow::GameWindow(QWidget *parent) : QGraphicsView(parent) {

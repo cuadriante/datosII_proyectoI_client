@@ -38,13 +38,21 @@ void Client::play() {
     Socket socket(clientSocketId);
     cout << "Game start." << endl;
     while(1){
-        ptree * pt = socket.readPtree();
-        if (pt != NULL) {
-            Command command;
-            command.readFromPtree(pt);
-            int action = command.getAction();
-            cout << "action: " << action << endl;
-            cout << "posX: " << command.getNewPlayerX() << endl;
+        //ptree * pt = socket.readPtree();
+        Command * c = socket.readCommand();
+        if (c != NULL) {
+
+            int action = c->getAction();
+            cout << "received action" << action << endl;
+            if (action == c->ACTION_CREATE_BLOCK) {
+
+            }
+
+//            Command command;
+//            command.readFromPtree(pt);
+//            int action = command.getAction();
+//            cout << "action: " << action << endl;
+//            cout << "posX: " << command.getNewPlayerX() << endl;
         }
     }
 }
