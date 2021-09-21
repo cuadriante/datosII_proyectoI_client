@@ -44,7 +44,7 @@ void Client::play() {
             command.readFromPtree(pt);
             int action = command.getAction();
             cout << "action: " << action << endl;
-            cout << "newPlayerX: " << command.getNewPlayerX() << endl;
+            cout << "posX: " << command.getNewPlayerX() << endl;
         }
     }
 }

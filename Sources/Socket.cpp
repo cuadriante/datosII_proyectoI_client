@@ -41,7 +41,7 @@ ptree * Socket::readPtree() {
         return NULL;
     }
     //cout << json << endl;
-    //json = "{\"action\":\"1\",\"newPlayerX\":\"200\"}";
+    //json = "{\"action\":\"1\",\"posX\":\"200\"}";
     ptree * pt = new ptree();
     istringstream is (json);
     read_json (is, *pt);
