@@ -26,14 +26,28 @@ ClientSocket* clientSocket;
 //    pthread_exit(NULL);
 //}
 
-GameWindow * gameWindow;
+//GameWindow * gameWindow;
 
 int main(int argc, char** argv) {
-    Client client;
-    if (client.start()) {
-        client.play();
-    }
 
+    QApplication app(argc, argv);
+
+    GAMEWINDOW_SINGLETON = new GameWindow();
+    GAMEWINDOW_SINGLETON->show();
+    GAMEWINDOW_SINGLETON->start();
+    //gameWindow = new GameWindow();
+    //gameWindow->show();
+    //gameWindow->start();
+
+
+
+//
+//    Client client;
+//    if (client.start()) {
+//        client.play();
+//    }
+
+    return app.exec();
 
 
 //    clientSocket = new ClientSocket;
@@ -44,7 +58,7 @@ int main(int argc, char** argv) {
 //    //string json = "hh"; // placeholder para el json que vamos a usar
 //
 //    while(1){
-//        Socket socket();
+//        Socket clientSocket();
 //        Command command;
 //        command.
 //

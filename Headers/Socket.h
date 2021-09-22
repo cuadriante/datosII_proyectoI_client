@@ -38,6 +38,7 @@ public:
 private:
     int descriptor; // se utiliza para identificar los sistemas
     const int maxConnectedClients = 4;
+    string buffer;
     static const int bufferSize = 1024;
     sockaddr_in info;
     vector<int> clients; // stores connected clients

@@ -14,6 +14,7 @@
 #include <pthread.h> // threads for multiprogramming
 #include <vector> //para almacenar varios clientes
 #include <unistd.h>
+#include "Socket.h"
 
 using namespace std;
 
@@ -23,9 +24,11 @@ private:
     struct sockaddr_in clientSocketInfo;
     int clientSocketInfoLen = sizeof(clientSocketInfo);
     int serverSocketPort = 4050;
+    Socket * clientSocket;
 public:
     bool start();
     void play();
+    static void * checkForMessages(void *clientObject);
 
 };
 

@@ -11,6 +11,7 @@ Socket::Socket(int socketId) {
 }
 
 void Socket::sendMessage(string message) {
+    message.append("\n");
     send(socketId, message.c_str(), message.size(), 0);
 }
 
@@ -25,8 +26,16 @@ string Socket::readMessage() {
         return "";
     }
     output.resize(bytes_received);
-    //output[bytes_received] = 0;
-    return output;
+    buffer.append(output);
+    output[bytes_received] = 0;
+    int pos = buffer.find("\n");
+    if (pos >= 0) {
+        string msg = buffer.substr(0, pos);
+        buffer.erase(0, pos + 1);
+        return msg;
+    }
+
+    return "";
 }
 
 void Socket::sendPtree(ptree *ptree) {

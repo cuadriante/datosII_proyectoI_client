@@ -4,6 +4,8 @@
 
 #include "../../Headers/GameWindow.h"
 #include "../../Headers/PlayerBar.h"
+#include "../../Headers/Client.h"
+#include "../../Headers/Block.h"
 
 
 GameWindow::GameWindow(QWidget *parent) : QGraphicsView(parent) {
@@ -21,4 +23,18 @@ void GameWindow::start() {
     playerBar->setFlag(QGraphicsItem::ItemIsFocusable);
     playerBar->setFocus();
 
+
+    //addBlock(0,0);
+
+
+    Client client;
+    if (client.start()) {
+        client.play();
+    }
+
+}
+void GameWindow::addBlock(int x, int y) {
+    Block * block = new Block();
+    block->setPos(x,y);
+    scene->addItem(block);
 }

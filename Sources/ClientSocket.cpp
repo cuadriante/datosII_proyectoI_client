@@ -10,9 +10,9 @@ ClientSocket::ClientSocket() {
 
 void ClientSocket::connectSocket() {
 //    // create descriptor
-//    descriptor = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+//    descriptor = clientSocket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 //    if (descriptor < 0){
-//        cout << "Error: Could not create socket.";
+//        cout << "Error: Could not create clientSocket.";
 //    }
 //    info.sin_family = AF_INET;
 //    info.sin_addr.s_addr = inet_addr("127.0.0.1"); // accepts anything

@@ -5,18 +5,24 @@
 #include "../Headers/Client.h"
 #include "../Headers/Socket.h"
 #include "../Headers/Command.h"
+#include "../Headers/GameWindow.h"
+#include <QDebug>
+#include <QKeyEvent>
+#include <QBrush>
+#include <QGraphicsRectItem>
+#include <pthread.h> // threads for multiprogramming
 
 bool Client::start() {
     clientSocketId = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (clientSocketId <= 0){
-        cout << "Error: Could not create socket" << endl;
+        cout << "Error: Could not create clientSocket" << endl;
         return false;
     }
 
     int opt = 1;
 
     if (setsockopt(clientSocketId, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &opt, sizeof(opt))) {
-        cout << "Error: Could not set socket options." << endl;
+        cout << "Error: Could not set clientSocket options." << endl;
         return false;
     }
 
@@ -30,21 +36,36 @@ bool Client::start() {
     }
     cout << "Successfully connected to server." << endl;
 
+    this->clientSocket = new Socket(clientSocketId);
+
 
     return true;
 }
 
 void Client::play() {
-    Socket socket(clientSocketId);
     cout << "Game start." << endl;
+    pthread_t thread;
+    pthread_create(&thread, 0, Client::checkForMessages, (void *)this);
+    pthread_detach(thread);
+    checkForMessages(this);
+
+}
+
+void * Client::checkForMessages(void *clientObject) {
+    cout << "Checking for messages." << endl;
+    Client * client = (Client *)clientObject;
     while(1){
-        //ptree * pt = socket.readPtree();
-        Command * c = socket.readCommand();
+        //ptree * pt = clientSocket.readPtree();
+        Command * c = client->clientSocket->readCommand();
         if (c != NULL) {
 
             int action = c->getAction();
             cout << "received action" << action << endl;
             if (action == c->ACTION_CREATE_BLOCK) {
+                int x = c->getPosX();
+                int y = c->getPosY();
+
+                //GAMEWINDOW_SINGLETON->addBlock(x, y);
 
             }
 
@@ -54,5 +75,7 @@ void Client::play() {
 //            cout << "action: " << action << endl;
 //            cout << "posX: " << command.getNewPlayerX() << endl;
         }
+        sleep(1);
     }
+
 }
