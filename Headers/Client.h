@@ -14,21 +14,25 @@
 #include <pthread.h> // threads for multiprogramming
 #include <vector> //para almacenar varios clientes
 #include <unistd.h>
+
 #include "Socket.h"
+#include "GameWindow.h"
 
 using namespace std;
 
-class Client {
+class Client{
 private:
     int clientSocketId;
     struct sockaddr_in clientSocketInfo;
     int clientSocketInfoLen = sizeof(clientSocketInfo);
     int serverSocketPort = 4050;
     Socket * clientSocket;
+    GameWindow * gameWindow;
 public:
+    Client(GameWindow * gameWindow);
     bool start();
     void play();
-    static void * checkForMessages(void *clientObject);
+
 
 };
 

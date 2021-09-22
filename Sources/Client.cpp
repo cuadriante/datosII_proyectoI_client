@@ -12,6 +12,10 @@
 #include <QGraphicsRectItem>
 #include <pthread.h> // threads for multiprogramming
 
+Client::Client(GameWindow * gameWindow) {
+    this->gameWindow = gameWindow;
+}
+
 bool Client::start() {
     clientSocketId = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (clientSocketId <= 0){
@@ -39,43 +43,63 @@ bool Client::start() {
     this->clientSocket = new Socket(clientSocketId);
 
 
+
+
     return true;
 }
 
 void Client::play() {
     cout << "Game start." << endl;
-    pthread_t thread;
-    pthread_create(&thread, 0, Client::checkForMessages, (void *)this);
-    pthread_detach(thread);
-    checkForMessages(this);
-
-}
-
-void * Client::checkForMessages(void *clientObject) {
-    cout << "Checking for messages." << endl;
-    Client * client = (Client *)clientObject;
-    while(1){
-        //ptree * pt = clientSocket.readPtree();
-        Command * c = client->clientSocket->readCommand();
+//    pthread_t thread;
+//    pthread_create(&thread, 0, Client::checkForMessages, (void *)this);
+//    pthread_detach(thread);
+    while (true) {
+        Command *c = clientSocket->readCommand();
         if (c != NULL) {
 
             int action = c->getAction();
-            cout << "received action" << action << endl;
+            //cout << "received action" << action << endl;
+            cout << "received id: " << c->getId() << endl;
             if (action == c->ACTION_CREATE_BLOCK) {
                 int x = c->getPosX();
                 int y = c->getPosY();
 
-                //GAMEWINDOW_SINGLETON->addBlock(x, y);
+                gameWindow->addBlock(x, y);
 
             }
-
-//            Command command;
-//            command.readFromPtree(pt);
-//            int action = command.getAction();
-//            cout << "action: " << action << endl;
-//            cout << "posX: " << command.getNewPlayerX() << endl;
         }
-        sleep(1);
+        QCoreApplication::processEvents();
     }
-
 }
+
+//void Client::process() {
+//    cout << "Checking for messages." << endl;
+//    while(1){
+//        //ptree * pt = clientSocket.readPtree();
+//        Command * c = clientSocket->readCommand();
+//        if (c != NULL) {
+//
+//            int action = c->getAction();
+//            //cout << "received action" << action << endl;
+//            cout << "received id: " << c->getId() << endl;
+//            if (action == c->ACTION_CREATE_BLOCK) {
+//                int x = c->getPosX();
+//                int y = c->getPosY();
+//
+//                //GAMEWINDOW_SINGLETON->addBlock(x, y);
+//
+//            }
+//
+////            Command command;
+////            command.readFromPtree(pt);
+////            int action = command.getAction();
+////            cout << "action: " << action << endl;
+////            cout << "posX: " << command.getNewPlayerX() << endl;
+//        } else {
+//          //  sleep(1);
+//        }
+//
+//    }
+//
+//}
+//

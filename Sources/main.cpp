@@ -26,18 +26,18 @@ ClientSocket* clientSocket;
 //    pthread_exit(NULL);
 //}
 
-//GameWindow * gameWindow;
+GameWindow * gameWindow;
 
 int main(int argc, char** argv) {
 
     QApplication app(argc, argv);
 
-    GAMEWINDOW_SINGLETON = new GameWindow();
-    GAMEWINDOW_SINGLETON->show();
-    GAMEWINDOW_SINGLETON->start();
-    //gameWindow = new GameWindow();
-    //gameWindow->show();
-    //gameWindow->start();
+//    GAMEWINDOW_SINGLETON = new GameWindow();
+//    GAMEWINDOW_SINGLETON->show();
+//    GAMEWINDOW_SINGLETON->start();
+    gameWindow = new GameWindow();
+    gameWindow->show();
+    gameWindow->start();
 
 
 

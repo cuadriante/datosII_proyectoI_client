@@ -21,17 +21,20 @@ string Socket::readMessage() {
 
 
     int bytes_received = read(socketId, &output[0], bufferSize-1);
-    if (bytes_received<0) {
-        cout << "Failed to read message." << endl;
-        return "";
+    if (bytes_received>0) {
+        output.resize(bytes_received);
+        output[bytes_received] = 0;
+        buffer.append(output);
+
     }
-    output.resize(bytes_received);
-    buffer.append(output);
-    output[bytes_received] = 0;
+
     int pos = buffer.find("\n");
-    if (pos >= 0) {
+    if (pos > 0) {
         string msg = buffer.substr(0, pos);
         buffer.erase(0, pos + 1);
+        cout << "output: " << output << endl;
+        cout << "message: " << msg << endl;
+        cout << "buffer: " << buffer << endl;
         return msg;
     }
 

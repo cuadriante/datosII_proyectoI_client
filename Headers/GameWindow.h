@@ -8,6 +8,8 @@
 
 #include <QGraphicsView>
 #include <QGraphicsScene>
+#include <QtWidgets>
+
 
 class GameWindow: public QGraphicsView {
 
@@ -16,12 +18,10 @@ public:
     QGraphicsScene * scene;
     // constructor
     GameWindow(QWidget* parent=NULL);
+
     void addBlock(int x, int y);
     void start();
 
 };
-
-static GameWindow * GAMEWINDOW_SINGLETON;
-
 
 #endif //DATOSII_PROYECTOI_CLIENT_GAMEWINDOW_H

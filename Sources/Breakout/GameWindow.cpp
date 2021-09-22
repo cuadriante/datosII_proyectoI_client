@@ -2,6 +2,7 @@
 // Created by cuadriante on 6/9/21.
 //
 
+
 #include "../../Headers/GameWindow.h"
 #include "../../Headers/PlayerBar.h"
 #include "../../Headers/Client.h"
@@ -24,13 +25,13 @@ void GameWindow::start() {
     playerBar->setFocus();
 
 
-    //addBlock(0,0);
 
-
-    Client client;
+    Client client(this);
     if (client.start()) {
         client.play();
     }
+
+
 
 }
 void GameWindow::addBlock(int x, int y) {
