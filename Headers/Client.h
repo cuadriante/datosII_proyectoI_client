@@ -27,12 +27,12 @@ private:
     int clientSocketInfoLen = sizeof(clientSocketInfo);
     int serverSocketPort = 4050;
     Socket * clientSocket;
-    GameWindow * gameWindow;
+    //GameWindow * gameWindow;
 public:
-    Client(GameWindow * gameWindow);
-    bool start();
-    void play();
-
+    Client();
+    bool connectSocket();
+    //void gameLoop();
+    Command * getNextCommand();
 
 };
 

@@ -5,9 +5,9 @@
 
 #include "../Headers/GameWindow.h"
 #include "../Headers/PlayerBar.h"
-#include "../Headers/Client.h"
 #include "../Headers/Block.h"
 #include "../Headers/Ball.h"
+#include "../Headers/GameLoop.h"
 
 
 GameWindow::GameWindow(QWidget *parent) : QGraphicsView(parent) {
@@ -26,23 +26,30 @@ void GameWindow::start() {
     playerBar->setFocus();
 
     // create initial ball
-    Ball* ball = new Ball();
-    ball->setPos(200,500);
-    scene->addItem(ball);
+//    Ball* ball = new Ball();
+//    ball->setPos(200,500);
+//    scene->addItem(ball);
 
 
-//    Client client(this);
-//    if (client.start()) {
-//        client.play();
-//    }
-
-
-
-
-
+    Client* client = new Client();
+    if (client->connectSocket()) {
+        GameLoop * gameLoop = new GameLoop();
+        scene->addItem(gameLoop);
+        gameLoop->receiveClient(client);
+        //client.getNextCommand();
+    } else {
+        cout << "Could not connect to server." << endl;
+        exit;
+    }
 }
-void GameWindow::addBlock(int x, int y) {
+
+
+
+
+
+void GameWindow::addBlock( int x, int y) {
     Block * block = new Block();
     block->setPos(x,y);
     scene->addItem(block);
 }
+

@@ -11,12 +11,15 @@
 #include <QBrush>
 #include <QGraphicsRectItem>
 #include <pthread.h> // threads for multiprogramming
+#include <fcntl.h>
 
-Client::Client(GameWindow * gameWindow) {
-    this->gameWindow = gameWindow;
+
+Client::Client() {
 }
 
-bool Client::start() {
+bool Client::connectSocket() {
+
+
     clientSocketId = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (clientSocketId <= 0){
         cout << "Error: Could not create clientSocket" << endl;
@@ -37,7 +40,16 @@ bool Client::start() {
 
     if ((connect(clientSocketId, (sockaddr *) &clientSocketInfo, (socklen_t) sizeof(clientSocketInfo))) < 0){
         cout << "Error: could not connect to server." << endl;
+        return false;
     }
+
+// Put the socket in non-blocking mode:
+    if(fcntl(clientSocketId, F_SETFL, fcntl(clientSocketId, F_GETFL) | O_NONBLOCK) < 0) {
+        // handle error
+        cout << "Error: Socket is nonblocking.";
+        return false;
+    }
+
     cout << "Successfully connected to server." << endl;
 
     this->clientSocket = new Socket(clientSocketId);
@@ -48,29 +60,37 @@ bool Client::start() {
     return true;
 }
 
-void Client::play() {
-    cout << "Game start." << endl;
-//    pthread_t thread;
-//    pthread_create(&thread, 0, Client::checkForMessages, (void *)this);
-//    pthread_detach(thread);
-    while (true) {
-        Command *c = clientSocket->readCommand();
-        if (c != NULL) {
+Command * Client::getNextCommand() {
 
-            int action = c->getAction();
-            //cout << "received action" << action << endl;
-            cout << "received id: " << c->getId() << endl;
-            if (action == c->ACTION_CREATE_BLOCK) {
-                int x = c->getPosX();
-                int y = c->getPosY();
-
-                gameWindow->addBlock(x, y);
-
-            }
-        }
-        QCoreApplication::processEvents();
-    }
+//    while (true) {
+    Command *c = clientSocket->readCommand();
+    return c;
+//    if (c != NULL) {
+//        return c;
+//    }
 }
+//
+//            int action = c->getAction();
+//            //cout << "received action" << action << endl;
+//            //cout << "received id: " << c->getId() << endl;
+ //           if (action == c->ACTION_CREATE_BLOCK) {
+  //              int x = c->getPosX();
+  //              int y = c->getPosY();
+
+
+   //             gameWindow->addBlock(x, y);
+
+   //        }
+    //   }
+//        QCoreApplication::processEvents();
+//    }
+//}
+
+//void Client::gameLoop() {
+//    cout << "." ;
+//
+//}
+
 
 //void Client::process() {
 //    cout << "Checking for messages." << endl;
@@ -86,7 +106,7 @@ void Client::play() {
 //                int x = c->getPosX();
 //                int y = c->getPosY();
 //
-//                //GAMEWINDOW_SINGLETON->addBlock(x, y);
+//                //GAMEWINDOW_SINGLETON->addBlockToScene(x, y);
 //
 //            }
 //

@@ -34,7 +34,7 @@ int main(int argc, char** argv) {
 
 //    GAMEWINDOW_SINGLETON = new GameWindow();
 //    GAMEWINDOW_SINGLETON->show();
-//    GAMEWINDOW_SINGLETON->start();
+//    GAMEWINDOW_SINGLETON->connectSocket();
     gameWindow = new GameWindow();
     gameWindow->show();
     gameWindow->start();
@@ -43,8 +43,8 @@ int main(int argc, char** argv) {
 
 //
 //    Client client;
-//    if (client.start()) {
-//        client.play();
+//    if (client.connectSocket()) {
+//        client.getNextCommand();
 //    }
 
     return app.exec();
@@ -65,13 +65,13 @@ int main(int argc, char** argv) {
 //        string msn;
 // //        cin >> msn;
 // //       cout << msn << endl;
-// //        if (msn == "start") {
-// //            cout << "Game start" << endl;
+// //        if (msn == "connectSocket") {
+// //            cout << "Game connectSocket" << endl;
 // //            QApplication app(argc, argv); //  esto hay que pasarlo a su propia funcion
 // //
 // //            gameWindow = new GameWindow();
 // //            gameWindow->show();
-// //            gameWindow->start();
+// //            gameWindow->connectSocket();
 // //
 // //            return app.exec();
 // //        }

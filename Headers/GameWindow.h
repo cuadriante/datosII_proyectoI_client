@@ -9,6 +9,8 @@
 #include <QGraphicsView>
 #include <QGraphicsScene>
 #include <QtWidgets>
+#include "Block.h"
+#include "Client.h"
 
 
 class GameWindow: public QGraphicsView {
@@ -18,8 +20,10 @@ public:
     QGraphicsScene * scene;
     // constructor
     GameWindow(QWidget* parent=NULL);
-
     void addBlock(int x, int y);
+//    void receiveBlockToAdd(int x, int y);
+//
+//    void addBlockToScene(Block * block, int x, int y);
     void start();
 
 };

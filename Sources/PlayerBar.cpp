@@ -12,7 +12,7 @@ PlayerBar::PlayerBar(QGraphicsItem *parent) {
     setRect(0,0,100,15);
     QBrush brush;
     brush.setStyle(Qt::SolidPattern);
-    brush.setColor(Qt::red);
+    brush.setColor(Qt::black);
     setBrush(brush);
 
 }

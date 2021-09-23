@@ -25,6 +25,7 @@ public slots:
     void move();
     void screenLimitCollision();
     void playerBarCollision();
+    void blockCollision();
     double getItemCenter();
 };
 
