@@ -3,7 +3,7 @@
 //
 
 
-#include "../../Headers/PlayerBar.h"
+#include "../Headers/PlayerBar.h"
 #include <QDebug>
 #include <QKeyEvent>
 #include <QBrush>
@@ -12,7 +12,7 @@ PlayerBar::PlayerBar(QGraphicsItem *parent) {
     setRect(0,0,100,15);
     QBrush brush;
     brush.setStyle(Qt::SolidPattern);
-    brush.setColor(Qt::gray);
+    brush.setColor(Qt::red);
     setBrush(brush);
 
 }
@@ -27,4 +27,8 @@ void PlayerBar::keyPressEvent(QKeyEvent *event) {
     qDebug() <<"Key pressed.";
 
 
+}
+
+double PlayerBar::getItemCenter() {
+    return x() + rect().width()/2;
 }

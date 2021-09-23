@@ -12,6 +12,7 @@ class PlayerBar: public QGraphicsRectItem{
 public:
     PlayerBar(QGraphicsItem *parent=NULL);
     void keyPressEvent (QKeyEvent * event);
+    double getItemCenter();
 };
 
 

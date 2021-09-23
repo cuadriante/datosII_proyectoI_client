@@ -3,10 +3,11 @@
 //
 
 
-#include "../../Headers/GameWindow.h"
-#include "../../Headers/PlayerBar.h"
-#include "../../Headers/Client.h"
-#include "../../Headers/Block.h"
+#include "../Headers/GameWindow.h"
+#include "../Headers/PlayerBar.h"
+#include "../Headers/Client.h"
+#include "../Headers/Block.h"
+#include "../Headers/Ball.h"
 
 
 GameWindow::GameWindow(QWidget *parent) : QGraphicsView(parent) {
@@ -24,12 +25,18 @@ void GameWindow::start() {
     playerBar->setFlag(QGraphicsItem::ItemIsFocusable);
     playerBar->setFocus();
 
+    // create initial ball
+    Ball* ball = new Ball();
+    ball->setPos(200,500);
+    scene->addItem(ball);
 
 
-    Client client(this);
-    if (client.start()) {
-        client.play();
-    }
+//    Client client(this);
+//    if (client.start()) {
+//        client.play();
+//    }
+
+
 
 
 
