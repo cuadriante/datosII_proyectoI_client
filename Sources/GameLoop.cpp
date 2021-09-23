@@ -22,6 +22,11 @@ void GameLoop::loop() {
             int y = c->getPosY();
             gameWindow->addBlock(x, y);
         }
+        if (action == c->ACTION_MOVE_BALL) {
+            int x = c->getPosX();
+            int y = c->getPosY();
+            gameWindow->addBlock(x, y);
+        }
     }
 
 }
