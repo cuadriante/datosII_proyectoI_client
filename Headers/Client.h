@@ -14,9 +14,9 @@
 #include <pthread.h> // threads for multiprogramming
 #include <vector> //para almacenar varios clientes
 #include <unistd.h>
-
+#include <QDebug>
+#include <fcntl.h>
 #include "Socket.h"
-#include "GameWindow.h"
 
 using namespace std;
 

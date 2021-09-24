@@ -61,3 +61,7 @@ int Command::getId() const {
 void Command::setId(int id) {
     Command::id = id;
 }
+
+void Command::setType(int type) {
+    Command::type = type;
+}

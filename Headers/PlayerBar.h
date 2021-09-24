@@ -5,7 +5,17 @@
 #ifndef DATOSII_PROYECTOI_CLIENT_PLAYERBAR_H
 #define DATOSII_PROYECTOI_CLIENT_PLAYERBAR_H
 
+#include <QGraphicsView>
+#include <QGraphicsScene>
+#include <QtWidgets>
+#include <QGraphicsItem>
 #include <QGraphicsRectItem>
+#include <QTimer>
+#include <QBrush>
+#include <QDebug>
+#include <QKeyEvent>
+#include <QApplication>
+#include <unistd.h>
 
 
 class PlayerBar: public QGraphicsRectItem{

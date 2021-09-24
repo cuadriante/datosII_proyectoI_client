@@ -13,19 +13,21 @@ GameLoop::GameLoop(QGraphicsItem *parent) {
 
 
 void GameLoop::loop() {
-    qDebug()  << ".";
+    //qDebug()  << ".";
     Command *c = client->getNextCommand();
     if (c != NULL){
         int action = c->getAction();
         if (action == c->ACTION_CREATE_BLOCK) {
             int x = c->getPosX();
             int y = c->getPosY();
-            gameWindow->addBlock(x, y);
+
+            gameWindow->addBlock(x, y, c->getType());
         }
         if (action == c->ACTION_MOVE_BALL) {
             int x = c->getPosX();
             int y = c->getPosY();
-            gameWindow->addBlock(x, y);
+            gameWindow->getBall()->setX(x);
+            gameWindow->getBall()->setY(y);
         }
     }
 

@@ -4,9 +4,7 @@
 
 
 #include "../Headers/PlayerBar.h"
-#include <QDebug>
-#include <QKeyEvent>
-#include <QBrush>
+
 
 PlayerBar::PlayerBar(QGraphicsItem *parent) {
     setRect(0,0,100,15);

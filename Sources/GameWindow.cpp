@@ -4,10 +4,7 @@
 
 
 #include "../Headers/GameWindow.h"
-#include "../Headers/PlayerBar.h"
-#include "../Headers/Block.h"
-#include "../Headers/Ball.h"
-#include "../Headers/GameLoop.h"
+
 
 
 GameWindow::GameWindow(QWidget *parent) : QGraphicsView(parent) {
@@ -19,16 +16,16 @@ GameWindow::GameWindow(QWidget *parent) : QGraphicsView(parent) {
 
 void GameWindow::start() {
     //create player bar
-    PlayerBar * playerBar = new PlayerBar();
+    playerBar = new PlayerBar();
     playerBar->setPos(300,550);
     scene->addItem(playerBar);
     playerBar->setFlag(QGraphicsItem::ItemIsFocusable);
     playerBar->setFocus();
 
-    // create initial ball
-//    Ball* ball = new Ball();
-//    ball->setPos(200,500);
-//    scene->addItem(ball);
+    // create initial pBall
+    ball = new Ball();
+    ball->setPos(0, 700);
+    scene->addItem(ball);
 
 
     Client* client = new Client();
@@ -47,9 +44,23 @@ void GameWindow::start() {
 
 
 
-void GameWindow::addBlock( int x, int y) {
+void GameWindow::addBlock(int x, int y, int type) {
     Block * block = new Block();
+    block->setType(type);
     block->setPos(x,y);
+    blocklist.push_back(block);
     scene->addItem(block);
+}
+
+Ball *GameWindow::getBall() const {
+    return ball;
+}
+
+const vector<Block *> &GameWindow::getBlocklist() const {
+    return blocklist;
+}
+
+void GameWindow::setBlocklist(const vector<Block *> &blocklist) {
+    GameWindow::blocklist = blocklist;
 }
 

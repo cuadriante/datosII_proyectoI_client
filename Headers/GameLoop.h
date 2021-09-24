@@ -5,12 +5,7 @@
 #ifndef DATOSII_PROYECTOI_CLIENT_GAMELOOP_H
 #define DATOSII_PROYECTOI_CLIENT_GAMELOOP_H
 
-
-
-#include <QGraphicsItem>
-#include <QGraphicsRectItem>
 #include "GameWindow.h"
-#include "Client.h"
 
 class GameLoop: public QObject, public QGraphicsRectItem {
     Q_OBJECT

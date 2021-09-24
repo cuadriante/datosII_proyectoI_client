@@ -3,15 +3,6 @@
 //
 
 #include "../Headers/Client.h"
-#include "../Headers/Socket.h"
-#include "../Headers/Command.h"
-#include "../Headers/GameWindow.h"
-#include <QDebug>
-#include <QKeyEvent>
-#include <QBrush>
-#include <QGraphicsRectItem>
-#include <pthread.h> // threads for multiprogramming
-#include <fcntl.h>
 
 
 Client::Client() {
@@ -62,64 +53,7 @@ bool Client::connectSocket() {
 
 Command * Client::getNextCommand() {
 
-//    while (true) {
     Command *c = clientSocket->readCommand();
     return c;
-//    if (c != NULL) {
-//        return c;
-//    }
+
 }
-//
-//            int action = c->getAction();
-//            //cout << "received action" << action << endl;
-//            //cout << "received id: " << c->getId() << endl;
- //           if (action == c->ACTION_CREATE_BLOCK) {
-  //              int x = c->getPosX();
-  //              int y = c->getPosY();
-
-
-   //             gameWindow->addBlock(x, y);
-
-   //        }
-    //   }
-//        QCoreApplication::processEvents();
-//    }
-//}
-
-//void Client::gameLoop() {
-//    cout << "." ;
-//
-//}
-
-
-//void Client::process() {
-//    cout << "Checking for messages." << endl;
-//    while(1){
-//        //ptree * pt = clientSocket.readPtree();
-//        Command * c = clientSocket->readCommand();
-//        if (c != NULL) {
-//
-//            int action = c->getAction();
-//            //cout << "received action" << action << endl;
-//            cout << "received id: " << c->getId() << endl;
-//            if (action == c->ACTION_CREATE_BLOCK) {
-//                int x = c->getPosX();
-//                int y = c->getPosY();
-//
-//                //GAMEWINDOW_SINGLETON->addBlockToScene(x, y);
-//
-//            }
-//
-////            Command command;
-////            command.readFromPtree(pt);
-////            int action = command.getAction();
-////            cout << "action: " << action << endl;
-////            cout << "posX: " << command.getNewPlayerX() << endl;
-//        } else {
-//          //  sleep(1);
-//        }
-//
-//    }
-//
-//}
-//

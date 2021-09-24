@@ -32,9 +32,9 @@ string Socket::readMessage() {
     if (pos > 0) {
         string msg = buffer.substr(0, pos);
         buffer.erase(0, pos + 1);
-        cout << "output: " << output << endl;
-        cout << "message: " << msg << endl;
-        cout << "buffer: " << buffer << endl;
+        //cout << "output: " << output << endl;
+        //cout << "message: " << msg << endl;
+        //cout << "buffer: " << buffer << endl;
         return msg;
     }
 
@@ -85,6 +85,7 @@ Command * Socket::readCommand(){
     c->setId(pt->get<int>("id", 0));
     c->setPosX(pt->get<int>("posX", 0));
     c->setPosY(pt->get<int>("posY", 0));
+    c->setType(pt->get<int>("type", 0));
     //c->setName(pt->get<string>("name", 0));
     return c;
 }

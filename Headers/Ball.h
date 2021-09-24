@@ -6,9 +6,20 @@
 #define DATOSII_PROYECTOI_CLIENT_BALL_H
 
 
+
+#include <QGraphicsView>
+#include <QGraphicsScene>
+#include <QtWidgets>
 #include <QGraphicsItem>
 #include <QGraphicsRectItem>
-#include "GameWindow.h"
+#include <QTimer>
+#include <QBrush>
+#include <QDebug>
+#include <QKeyEvent>
+#include <QApplication>
+#include <unistd.h>
+
+
 
 class Ball: public QObject, public QGraphicsRectItem {
     Q_OBJECT
@@ -22,11 +33,11 @@ private:
 
 
 public slots:
-    void move();
-    void screenLimitCollision();
-    void playerBarCollision();
-    void blockCollision();
-    double getItemCenter();
+//    void move();
+//    void screenLimitCollision();
+//    void playerBarCollision();
+//    void blockCollision();
+//    double getItemCenter();
 };
 
 
