@@ -45,8 +45,9 @@ bool Client::connectSocket() {
 
     this->clientSocket = new Socket(clientSocketId);
 
-
-
+    Command cmd;
+    cmd.setAction(Command::ACTION_START_GAME);
+    clientSocket->sendCommand(cmd);
 
     return true;
 }
