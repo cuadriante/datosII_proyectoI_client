@@ -22,7 +22,6 @@ void PlayerBar::keyPressEvent(QKeyEvent *event) {
     else if (event->key() == Qt::Key_Right){
         setPos(x()+10, y());
     }
-    qDebug() <<"Key pressed.";
 
 
 }

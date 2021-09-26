@@ -24,7 +24,6 @@ void Block::setType(int type) {
     QBrush brush;
     brush.setStyle(Qt::SolidPattern);
     Command c;
-    qDebug() << type;
     switch(type){
         case c.BLOCK_TYPE_COMMON:{
             brush.setColor(Qt::gray);

@@ -11,10 +11,11 @@
 
 
 Ball::Ball(QGraphicsItem *parent){
-    setRect(0,0,25,25);
+    int radius = 20;
+    setRect(-5,-5,radius,radius);
     QBrush brush;
     brush.setStyle(Qt::SolidPattern);
-    brush.setColor(Qt::white);
+    brush.setColor(Qt::darkBlue);
     setBrush(brush);
 
     // move up right initially
