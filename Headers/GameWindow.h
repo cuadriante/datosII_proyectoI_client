@@ -46,6 +46,10 @@ public:
     const vector<Block *> &getBlocklist() const;
 
     void setBlocklist(const vector<Block *> &blocklist);
+
+    PlayerBar *getPlayerBar() const;
+
+    void setPlayerBar(PlayerBar *playerBar);
 };
 
 #endif //DATOSII_PROYECTOI_CLIENT_GAMEWINDOW_H

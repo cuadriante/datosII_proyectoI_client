@@ -16,13 +16,26 @@
 #include <QKeyEvent>
 #include <QApplication>
 #include <unistd.h>
+#include "Socket.h"
 
 
 class PlayerBar: public QGraphicsRectItem{
+private:
+    int size;
+    Socket * clientSocket = NULL;
+public:
+    Socket *getClientSocket() const;
+
+    void setClientSocket(Socket *clientSocket);
+
 public:
     PlayerBar(QGraphicsItem *parent=NULL);
     void keyPressEvent (QKeyEvent * event);
     double getItemCenter();
+
+    int getSize() const;
+
+    void setSize(int size);
 };
 
 

@@ -65,3 +65,12 @@ void Command::setId(int id) {
 void Command::setType(int type) {
     Command::type = type;
 }
+
+
+int Command::getSize() const {
+    return size;
+}
+
+void Command::setSize(int size) {
+    Command::size = size;
+}

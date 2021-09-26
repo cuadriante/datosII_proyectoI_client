@@ -33,6 +33,7 @@ public:
     bool connectSocket();
     //void gameLoop();
     Command * getNextCommand();
+    Socket *getClientSocket() const;
 
 };
 

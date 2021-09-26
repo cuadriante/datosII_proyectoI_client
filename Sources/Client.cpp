@@ -34,7 +34,7 @@ bool Client::connectSocket() {
         return false;
     }
 
-// Put the socket in non-blocking mode:
+// Put the clientSocket in non-blocking mode:
     if(fcntl(clientSocketId, F_SETFL, fcntl(clientSocketId, F_GETFL) | O_NONBLOCK) < 0) {
         // handle error
         cout << "Error: Socket is nonblocking.";
@@ -57,4 +57,8 @@ Command * Client::getNextCommand() {
     Command *c = clientSocket->readCommand();
     return c;
 
+}
+
+Socket *Client::getClientSocket() const {
+    return clientSocket;
 }

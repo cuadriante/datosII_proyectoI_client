@@ -6,7 +6,6 @@
 #include "../Headers/GameWindow.h"
 
 
-
 GameWindow::GameWindow(QWidget *parent) : QGraphicsView(parent) {
     //initialization
     scene = new QGraphicsScene(0,0,600,600);
@@ -17,7 +16,7 @@ GameWindow::GameWindow(QWidget *parent) : QGraphicsView(parent) {
 void GameWindow::start() {
     //create player bar
     playerBar = new PlayerBar();
-    playerBar->setPos(300,550);
+    playerBar->setPos(700,700);
     scene->addItem(playerBar);
     playerBar->setFlag(QGraphicsItem::ItemIsFocusable);
     playerBar->setFocus();
@@ -32,7 +31,9 @@ void GameWindow::start() {
     if (client->connectSocket()) {
         GameLoop * gameLoop = new GameLoop();
         scene->addItem(gameLoop);
+        playerBar->setClientSocket(client->getClientSocket());
         gameLoop->receiveClient(client);
+
         //client.getNextCommand();
     } else {
         cout << "Could not connect to server." << endl;
@@ -62,5 +63,13 @@ const vector<Block *> &GameWindow::getBlocklist() const {
 
 void GameWindow::setBlocklist(const vector<Block *> &blocklist) {
     GameWindow::blocklist = blocklist;
+}
+
+PlayerBar *GameWindow::getPlayerBar() const {
+    return playerBar;
+}
+
+void GameWindow::setPlayerBar(PlayerBar *playerBar) {
+    GameWindow::playerBar = playerBar;
 }
 

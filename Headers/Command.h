@@ -16,6 +16,7 @@ class Command {
 public:
     static const int ACTION_NONE = 0;
     // to player
+    static const int ACTION_CREATE_PLAYER = 10;
     static const int ACTION_MOVE_PLAYER = 11;
     static const int ACTION_MOVE_BALL = 12;
     static const int ACTION_MOVE_BLOCK = 13;
@@ -36,32 +37,47 @@ public:
     static const int BLOCK_TYPE_SURPRISE = 36;
 
 
-    void writeToPtree(ptree * pt);
-    void readFromPtree(ptree * pt);
+    void writeToPtree(ptree *pt);
+
+    void readFromPtree(ptree *pt);
+
     void setAction(int action);
+
     void setPosX(int newPlayerX);
+
     int getAction();
+
     int getPosX();
+
     int getType() const;
+
     int getPosY() const;
+
     void setPosY(int posY);
+
     void setType(int type);
+
     const string &getName() const;
+
     void setName(const string &name);
 
-private:
-    int id;
-public:
+    int getSize() const;
+
+    void setSize(int size);
+
     int getId() const;
 
     void setId(int id);
 
 private:
+    int id;
     int action;
     int posX;
     int posY;
     string name;
     int type;
+    int size;
+
 
 };
 
