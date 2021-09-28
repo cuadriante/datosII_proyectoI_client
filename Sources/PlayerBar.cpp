@@ -16,20 +16,45 @@ PlayerBar::PlayerBar(QGraphicsItem *parent) {
 }
 
 void PlayerBar::keyPressEvent(QKeyEvent *event) {
+
+    int posX = x();
+    int posY = y();
+
+    int prevx = posX;
+    int prevy = posY;
+
     if(clientSocket == NULL){
         return;
     }
     if (event->key() == Qt::Key_Left) {
-        Command c;
-        c.setAction(c.ACTION_MOVE_LEFT);
-        clientSocket->sendCommand(c);
-        //setPos(x() - 10, y());
+        posX = posX - 10;
+        if (posX < 0) {
+            posX = 0;
+        }
+        //Command c;
+        //c.setAction(c.ACTION_MOVE_LEFT);
+        //clientSocket->sendCommand(c);
+
     } else if (event->key() == Qt::Key_Right) {
-        Command c;
-        c.setAction(c.ACTION_MOVE_RIGHT);
-        clientSocket->sendCommand(c);
+        posX = posX + 10;
+        if (posX > 500) {
+            posX = 500;
+        }
+        //Command c;
+        //c.setAction(c.ACTION_MOVE_RIGHT);
+        //clientSocket->sendCommand(c);
         //setPos(x() + 10, y());
     }
+
+    if (posX != prevx || posY != prevy) {
+        setPos(posX, posY);
+        Command c;
+        c.setAction(c.ACTION_MOVE_PLAYER);
+        c.setPosX(posX);
+        c.setPosY(posY);
+        clientSocket->sendCommand(c);
+    }
+
 
 
 }

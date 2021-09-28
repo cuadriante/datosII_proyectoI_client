@@ -36,6 +36,8 @@ public:
     int getSize() const;
 
     void setSize(int size);
+
+
 };
 
 
