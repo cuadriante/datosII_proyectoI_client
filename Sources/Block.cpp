@@ -64,4 +64,12 @@ void Block::setHitsToBreak(int hitsToBreak) {
     Block::hitsToBreak = hitsToBreak;
 }
 
+int Block::getId() const {
+    return id;
+}
+
+void Block::setId(int id) {
+    Block::id = id;
+}
+
 

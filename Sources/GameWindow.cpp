@@ -10,6 +10,7 @@ GameWindow::GameWindow(QWidget *parent) : QGraphicsView(parent) {
     //initialization
     scene = new QGraphicsScene(0,0,600,600);
     setScene(scene);
+    this->setWindowTitle("Crazy Breakout");
 
 }
 
@@ -26,6 +27,13 @@ void GameWindow::start() {
     ball->setPos(0, 700);
     scene->addItem(ball);
 
+    // create points label
+    label = new QLabel(this);
+    label->setText("Points: 0");
+    label->setAlignment(Qt::AlignBottom | Qt::AlignRight);
+    label->setGeometry(470,400,100,100);
+    label->setVisible(true);
+
 
     Client* client = new Client();
     if (client->connectSocket()) {
@@ -33,8 +41,6 @@ void GameWindow::start() {
         scene->addItem(gameLoop);
         playerBar->setClientSocket(client->getClientSocket());
         gameLoop->receiveClient(client);
-
-        //client.getNextCommand();
     } else {
         cout << "Could not connect to server." << endl;
         exit;
@@ -45,8 +51,9 @@ void GameWindow::start() {
 
 
 
-void GameWindow::addBlock(int x, int y, int type) {
+void GameWindow::addBlock(int id, int x, int y, int type) {
     Block * block = new Block();
+    block->setId(id);
     block->setType(type);
     block->setPos(x,y);
     blocklist.push_back(block);
@@ -71,5 +78,16 @@ PlayerBar *GameWindow::getPlayerBar() const {
 
 void GameWindow::setPlayerBar(PlayerBar *playerBar) {
     GameWindow::playerBar = playerBar;
+}
+
+void GameWindow::setScoreLabel(int score) {
+    totalPoints = totalPoints + score;
+    string text = to_string(totalPoints);
+    const QString& qString= text.c_str();
+    label->setText("Points: " + qString);
+    label->setAlignment(Qt::AlignBottom | Qt::AlignRight);
+    label->setGeometry(470,400,100,100);
+    label->setVisible(true);
+
 }
 

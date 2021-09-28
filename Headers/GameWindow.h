@@ -30,13 +30,15 @@ private:
     Ball * ball;
     vector<Block *> blocklist;
     PlayerBar * playerBar;
+    QLabel * label;
+    int totalPoints = 0;
 
 public:
     //attributes
     QGraphicsScene * scene;
     // constructor
     GameWindow(QWidget* parent=NULL);
-    void addBlock(int x, int y, int type);
+    void addBlock(int id, int x, int y, int type);
 //    void receiveBlockToAdd(int x, int y);
 //
 //    void addBlockToScene(Block * block, int x, int y);
@@ -50,6 +52,8 @@ public:
     PlayerBar *getPlayerBar() const;
 
     void setPlayerBar(PlayerBar *playerBar);
+
+    void setScoreLabel(int score);
 };
 
 #endif //DATOSII_PROYECTOI_CLIENT_GAMEWINDOW_H

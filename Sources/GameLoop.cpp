@@ -19,9 +19,10 @@ void GameLoop::loop() {
         int action = c->getAction();
         switch(action){
             case Command::ACTION_CREATE_BLOCK: {
+                int id = c->getId();
                 int x = c->getPosX();
                 int y = c->getPosY();
-                gameWindow->addBlock(x, y, c->getType());
+                gameWindow->addBlock(id, x, y, c->getType());
                 break;
             }
             case Command::ACTION_MOVE_BALL: {
@@ -41,6 +42,17 @@ void GameLoop::loop() {
                 playerBar->setSize(size);
                 //playerBar->setFlag(QGraphicsItem::ItemIsFocusable);
                 //playerBar->setFocus();
+                break;
+            }
+            case Command::ACTION_DELETE_BLOCK:{
+                int id = c->getId();
+                Block * block = gameWindow->getBlocklist().at(id);
+                block->hide();
+                break;
+            }
+            case Command::ACTION_SET_SCORE: {
+                int score = c->getSize();
+                gameWindow->setScoreLabel(score);
                 break;
             }
         }

@@ -24,6 +24,7 @@ class Block: public QObject, public QGraphicsRectItem {
 Q_OBJECT
 
 private:
+    int id;
     int type;
     int hitsToBreak;
 
@@ -39,6 +40,10 @@ public:
     int getHitsToBreak() const;
 
     void setHitsToBreak(int hitsToBreak);
+
+    int getId() const;
+
+    void setId(int id);
 
 };
 
