@@ -5,6 +5,12 @@
 #ifndef DATOSII_PROYECTOI_CLIENT_CLIENT_H
 #define DATOSII_PROYECTOI_CLIENT_CLIENT_H
 
+/** @brief Client class used for communication with server.
+
+    @author cuadriante
+    @date September 2021
+    */
+
 #include <sys/socket.h>
 #include <sys/types.h>
 #include <netdb.h> //librerias para red

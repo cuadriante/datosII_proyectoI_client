@@ -2,6 +2,13 @@
 // Created by cuadriante on 22/9/21.
 //
 
+/** @brief Ball class used for displaying ball.
+
+    @author cuadriante
+    @date September 2021
+    */
+
+
 #ifndef DATOSII_PROYECTOI_CLIENT_BALL_H
 #define DATOSII_PROYECTOI_CLIENT_BALL_H
 

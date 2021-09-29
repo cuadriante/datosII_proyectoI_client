@@ -18,6 +18,12 @@
 #include <boost/property_tree//json_parser.hpp>
 #include "Command.h"
 
+/** @brief Socket class used for connecting to server.
+
+    @author cuadriante
+    @date September 2021
+    */
+
 using namespace std;
 using boost::property_tree::ptree;
 using boost::property_tree::read_json;

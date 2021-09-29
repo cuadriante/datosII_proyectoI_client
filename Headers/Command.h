@@ -5,6 +5,12 @@
 #ifndef DATOSII_PROYECTOI_SERVER_COMMAND_H
 #define DATOSII_PROYECTOI_SERVER_COMMAND_H
 
+/** @brief Command class used for communication between server and socket.
+
+    @author cuadriante
+    @date September 2021
+    */
+
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree//json_parser.hpp>
 

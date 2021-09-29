@@ -5,6 +5,12 @@
 #ifndef DATOSII_PROYECTOI_CLIENT_GAMEWINDOW_H
 #define DATOSII_PROYECTOI_CLIENT_GAMEWINDOW_H
 
+/** @brief GameWindow class used for displaying displaying game.
+
+    @author cuadriante
+    @date September 2021
+    */
+
 #include <QGraphicsView>
 #include <QGraphicsScene>
 #include <QtWidgets>

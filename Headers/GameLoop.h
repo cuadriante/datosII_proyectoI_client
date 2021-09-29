@@ -5,6 +5,12 @@
 #ifndef DATOSII_PROYECTOI_CLIENT_GAMELOOP_H
 #define DATOSII_PROYECTOI_CLIENT_GAMELOOP_H
 
+/** @brief GameLoop class used for game window thread.
+
+    @author cuadriante
+    @date September 2021
+    */
+
 #include "GameWindow.h"
 
 class GameLoop: public QObject, public QGraphicsRectItem {

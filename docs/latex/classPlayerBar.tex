@@ -1,0 +1,132 @@
+\hypertarget{classPlayerBar}{}\doxysection{Player\+Bar Class Reference}
+\label{classPlayerBar}\index{PlayerBar@{PlayerBar}}
+
+
+\mbox{\hyperlink{classPlayerBar}{Player\+Bar}} class used for displaying player.  
+
+
+
+
+{\ttfamily \#include $<$Player\+Bar.\+h$>$}
+
+Inheritance diagram for Player\+Bar\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classPlayerBar}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlayerBar_ab766b19505d03fa08a6872fb57ad8a56}{Player\+Bar}} (QGraphics\+Item $\ast$parent=NULL)
+\item 
+void \mbox{\hyperlink{classPlayerBar_a71b84279c3afe2e22b2342ee638c9cde}{key\+Press\+Event}} (QKey\+Event $\ast$event)
+\item 
+int \mbox{\hyperlink{classPlayerBar_a6caac00d399cc80ba6c93c7d51a06286}{get\+Size}} () const
+\item 
+void \mbox{\hyperlink{classPlayerBar_aefb4a59475fd0b919759d6a1318a887d}{set\+Size}} (int size)
+\item 
+\mbox{\hyperlink{classSocket}{Socket}} $\ast$ \mbox{\hyperlink{classPlayerBar_ae20f3e2be7c26e847289a45ba0024df2}{get\+Client\+Socket}} () const
+\item 
+void \mbox{\hyperlink{classPlayerBar_a5a244e93582992dd88cf435b69179025}{set\+Client\+Socket}} (\mbox{\hyperlink{classSocket}{Socket}} $\ast$client\+Socket)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classPlayerBar}{Player\+Bar}} class used for displaying player. 
+
+Used for player to move horizontally using keys. \begin{DoxyAuthor}{Author}
+cuadriante 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+September 2021 
+\end{DoxyDate}
+
+
+Definition at line \mbox{\hyperlink{PlayerBar_8h_source_l00028}{28}} of file \mbox{\hyperlink{PlayerBar_8h_source}{Player\+Bar.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPlayerBar_ab766b19505d03fa08a6872fb57ad8a56}\label{classPlayerBar_ab766b19505d03fa08a6872fb57ad8a56}} 
+\index{PlayerBar@{PlayerBar}!PlayerBar@{PlayerBar}}
+\index{PlayerBar@{PlayerBar}!PlayerBar@{PlayerBar}}
+\doxysubsubsection{\texorpdfstring{PlayerBar()}{PlayerBar()}}
+{\footnotesize\ttfamily Player\+Bar\+::\+Player\+Bar (\begin{DoxyParamCaption}\item[{QGraphics\+Item $\ast$}]{parent = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Constructor. Initiallizes rect item.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPlayerBar_ae20f3e2be7c26e847289a45ba0024df2}\label{classPlayerBar_ae20f3e2be7c26e847289a45ba0024df2}} 
+\index{PlayerBar@{PlayerBar}!getClientSocket@{getClientSocket}}
+\index{getClientSocket@{getClientSocket}!PlayerBar@{PlayerBar}}
+\doxysubsubsection{\texorpdfstring{getClientSocket()}{getClientSocket()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSocket}{Socket}} $\ast$ Player\+Bar\+::get\+Client\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns client socket.
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPlayerBar_a6caac00d399cc80ba6c93c7d51a06286}\label{classPlayerBar_a6caac00d399cc80ba6c93c7d51a06286}} 
+\index{PlayerBar@{PlayerBar}!getSize@{getSize}}
+\index{getSize@{getSize}!PlayerBar@{PlayerBar}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily int Player\+Bar\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns size.
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPlayerBar_a71b84279c3afe2e22b2342ee638c9cde}\label{classPlayerBar_a71b84279c3afe2e22b2342ee638c9cde}} 
+\index{PlayerBar@{PlayerBar}!keyPressEvent@{keyPressEvent}}
+\index{keyPressEvent@{keyPressEvent}!PlayerBar@{PlayerBar}}
+\doxysubsubsection{\texorpdfstring{keyPressEvent()}{keyPressEvent()}}
+{\footnotesize\ttfamily void Player\+Bar\+::key\+Press\+Event (\begin{DoxyParamCaption}\item[{QKey\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+Key Press event. CHecks for left and right keyboard click and moves paddle.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPlayerBar_a5a244e93582992dd88cf435b69179025}\label{classPlayerBar_a5a244e93582992dd88cf435b69179025}} 
+\index{PlayerBar@{PlayerBar}!setClientSocket@{setClientSocket}}
+\index{setClientSocket@{setClientSocket}!PlayerBar@{PlayerBar}}
+\doxysubsubsection{\texorpdfstring{setClientSocket()}{setClientSocket()}}
+{\footnotesize\ttfamily void Player\+Bar\+::set\+Client\+Socket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSocket}{Socket}} $\ast$}]{client\+Socket }\end{DoxyParamCaption})}
+
+Sets client socket.
+
+
+\begin{DoxyParams}{Parameters}
+{\em client\+Socket} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPlayerBar_aefb4a59475fd0b919759d6a1318a887d}\label{classPlayerBar_aefb4a59475fd0b919759d6a1318a887d}} 
+\index{PlayerBar@{PlayerBar}!setSize@{setSize}}
+\index{setSize@{setSize}!PlayerBar@{PlayerBar}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily void Player\+Bar\+::set\+Size (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})}
+
+Size setter.
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Headers/Player\+Bar.\+h\end{DoxyCompactItemize}
