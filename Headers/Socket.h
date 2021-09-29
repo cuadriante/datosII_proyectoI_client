@@ -5,6 +5,12 @@
 #ifndef DATOSII_PROYECTOI_SERVER_SOCKET_H
 #define DATOSII_PROYECTOI_SERVER_SOCKET_H
 
+/** @brief Socket class used for connecting to server.
+
+    @author cuadriante
+    @date September 2021
+    */
+
 #include <sys/socket.h>
 #include <sys/types.h>
 #include <netdb.h> //librerias para red
@@ -18,11 +24,8 @@
 #include <boost/property_tree//json_parser.hpp>
 #include "Command.h"
 
-/** @brief Socket class used for connecting to server.
 
-    @author cuadriante
-    @date September 2021
-    */
+
 
 using namespace std;
 using boost::property_tree::ptree;

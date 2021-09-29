@@ -5,6 +5,13 @@
 #ifndef DATOSII_PROYECTOI_CLIENT_PLAYERBAR_H
 #define DATOSII_PROYECTOI_CLIENT_PLAYERBAR_H
 
+/** @brief PlayerBar class used for displaying player.
+
+    Used for player to move horizontally using keys.
+    @author cuadriante
+    @date September 2021
+    */
+
 #include <QGraphicsView>
 #include <QGraphicsScene>
 #include <QtWidgets>
@@ -18,12 +25,7 @@
 #include <unistd.h>
 #include "Socket.h"
 
-/** @brief PlayerBar class used for displaying player.
 
-    Used for player to move horizontally using keys.
-    @author cuadriante
-    @date September 2021
-    */
 
 class PlayerBar: public QGraphicsRectItem{
 private:

@@ -5,6 +5,13 @@
 #ifndef DATOSII_PROYECTOI_CLIENT_BLOCK_H
 #define DATOSII_PROYECTOI_CLIENT_BLOCK_H
 
+/** @brief Block class used for displaying blocks.
+
+    Blocks with set type and qualities.
+    @author cuadriante
+    @date September 2021
+    */
+
 #include <QGraphicsView>
 #include <QGraphicsScene>
 #include <QtWidgets>
@@ -18,12 +25,6 @@
 #include <unistd.h>
 
 
-/** @brief Block class used for displaying blocks.
-
-    Blocks with set type and qualities.
-    @author cuadriante
-    @date September 2021
-    */
 
 
 class Block: public QObject, public QGraphicsRectItem {
