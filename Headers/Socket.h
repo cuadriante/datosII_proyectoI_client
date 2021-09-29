@@ -24,28 +24,48 @@ using boost::property_tree::read_json;
 using boost::property_tree::write_json;
 
 class Socket {
+
 private:
-    int socketId;
+    int socketId; /**<initial socket id*/
+    string buffer; /**<initial buffer*/
+    static const int bufferSize = 1024; /**<buffer size*/
+
 public:
+    /** Constructor.
+     *
+     * @param socketId
+     */
     Socket(int socketId);
+    /** Reads json message coming from server.
+     *
+     * @return
+     */
     string readMessage();
+    /** Sends message to server.
+     *
+     * @param message
+     */
     void sendMessage(string message);
+    /** Send Ptree object.
+     *
+     * @param ptree
+     */
     void sendPtree(ptree * ptree);
+    /** Reads Ptree object.
+     *
+     * @return
+     */
     ptree * readPtree();
+    /** Sends command to server.
+     *
+     * @param command
+     */
     void sendCommand(Command &command);
+    /**Reads command from server.
+     *
+     * @return
+     */
     Command *readCommand();
-
-private:
-    int descriptor; // se utiliza para identificar los sistemas
-    const int maxConnectedClients = 4;
-    string buffer;
-    static const int bufferSize = 1024;
-    sockaddr_in info;
-    vector<int> clients; // stores connected clients
-    bool create_socket();
-    bool bind_kernel(); //bind with port, establish maximum client quantity
-    static void* ClientController(void*);
-
 };
 
 

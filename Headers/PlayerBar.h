@@ -18,26 +18,52 @@
 #include <unistd.h>
 #include "Socket.h"
 
+/** @brief PlayerBar class used for displaying player.
+
+    Used for player to move horizontally using keys.
+    @author cuadriante
+    @date September 2021
+    */
 
 class PlayerBar: public QGraphicsRectItem{
 private:
-    int size;
-    Socket * clientSocket = NULL;
-public:
-    Socket *getClientSocket() const;
-
-    void setClientSocket(Socket *clientSocket);
+    int size; /**<initial size*/
+    Socket * clientSocket = NULL; /**<initial client socket*/
 
 public:
+    /** Constructor. Initiallizes rect item.
+     *
+     * @param parent
+     */
     PlayerBar(QGraphicsItem *parent=NULL);
-    void keyPressEvent (QKeyEvent * event);
-    double getItemCenter();
 
+    /** Key Press event. CHecks for left and right keyboard click and moves paddle.
+     *
+     * @param event
+     */
+    void keyPressEvent (QKeyEvent * event);
+
+    /** Returns size.
+     *
+     * @return
+     */
     int getSize() const;
 
+    /** Size setter.
+     *
+     * @param size
+     */
     void setSize(int size);
-
-
+    /** Returns client socket.
+     *
+     * @return
+     */
+    Socket *getClientSocket() const;
+    /** Sets client socket.
+     *
+     * @param clientSocket
+     */
+    void setClientSocket(Socket *clientSocket);
 };
 
 

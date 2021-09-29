@@ -27,37 +27,82 @@ using namespace std;
 
 class GameWindow: public QGraphicsView {
 private:
-    Ball * ball;
-    vector<Block *> blocklist;
-    PlayerBar * playerBar;
-    QLabel * pointsLabel;
-    QLabel * depthLabel;
-    int totalPoints = 0;
-    int depthLevel = 0;
+    Ball * ball; /**<initial ball*/
+    vector<Block *> blocklist; /**<initial blockList*/
+    PlayerBar * playerBar; /**<initial player bar*/
+    QLabel * pointsLabel; /**<initial points label*/
+    QLabel * depthLabel; /**<initial depth level label*/
+    QLabel * surpriseLabel; /**<initial surprise label*/
+    int totalPoints = 0; /**<initial total points*/
+    int depthLevel = 0; /**<initial depth level*/
 
 public:
-    //attributes
-    QGraphicsScene * scene;
-    // constructor
+    QGraphicsScene * scene; /**Graphic scene*/
+    /** Constructor
+     *
+     * @param parent
+     */
     GameWindow(QWidget* parent=NULL);
+    /** Adds block to game window.
+     *
+     * @param id
+     * @param x
+     * @param y
+     * @param type
+     */
     void addBlock(int id, int x, int y, int type);
-//    void receiveBlockToAdd(int x, int y);
-//
-//    void addBlockToScene(Block * block, int x, int y);
+    /** Initializes game.
+     *
+     */
     void start();
+    /** Returns ball.
+     *
+     * @return
+     */
     Ball *getBall() const;
-
+    /** Returns list of blocks in game.
+     *
+     * @return
+     */
     const vector<Block *> &getBlocklist() const;
-
+    /** Sets block list to be displayed.
+     *
+     * @param blocklist
+     */
     void setBlocklist(const vector<Block *> &blocklist);
-
+    /** Returns rect item to be moved by player.
+     *
+     * @return
+     */
     PlayerBar *getPlayerBar() const;
-
+    /** Sets rect item to be used by player.
+     *
+     * @param playerBar
+     */
     void setPlayerBar(PlayerBar *playerBar);
-
+    /** Sets score label, displays current points gained.
+     *
+     * @param score
+     */
     void setScoreLabel(int score);
-
+    /** Sets depth level, displays current.
+     *
+     * @param depthLevel
+     */
     void setDepthLabel(int depthLevel);
+    /** Sets surprise label when surprise block is destroyed.
+     *
+     */
+    void setSurpriseLabel();
+    /** Returns surprise label.
+     *
+     * @return
+     */
+    QLabel *getSurpriseLabel() const;
+    /** Creates initial labels.
+     *
+     */
+    void createLabels();
 };
 
 #endif //DATOSII_PROYECTOI_CLIENT_GAMEWINDOW_H

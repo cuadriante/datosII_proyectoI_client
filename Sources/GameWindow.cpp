@@ -1,6 +1,9 @@
 //
 // Created by cuadriante on 6/9/21.
 //
+/**
+ *
+ */
 
 
 #include "../Headers/GameWindow.h"
@@ -27,7 +30,22 @@ void GameWindow::start() {
     ball->setPos(0, 700);
     scene->addItem(ball);
 
-    // create points pointsLabel
+
+
+    Client* client = new Client();
+    if (client->connectSocket()) {
+        createLabels();
+        GameLoop * gameLoop = new GameLoop();
+        scene->addItem(gameLoop);
+        playerBar->setClientSocket(client->getClientSocket());
+        gameLoop->receiveClient(client);
+    } else {
+        cout << "Could not connect to server." << endl;
+        exit;
+    }
+}
+
+void GameWindow::createLabels() {// create points pointsLabel
     pointsLabel = new QLabel(this);
     pointsLabel->setText("Points: 0");
     pointsLabel->setAlignment(Qt::AlignBottom | Qt::AlignRight);
@@ -38,20 +56,14 @@ void GameWindow::start() {
     depthLabel = new QLabel(this);
     depthLabel->setText("Depth Level: 0");
     depthLabel->setAlignment(Qt::AlignBottom | Qt::AlignRight);
-    depthLabel->setGeometry(470, 380, 100, 100);
+    depthLabel->setGeometry(470, 380, 110, 100);
     depthLabel->setVisible(true);
 
-
-    Client* client = new Client();
-    if (client->connectSocket()) {
-        GameLoop * gameLoop = new GameLoop();
-        scene->addItem(gameLoop);
-        playerBar->setClientSocket(client->getClientSocket());
-        gameLoop->receiveClient(client);
-    } else {
-        cout << "Could not connect to server." << endl;
-        exit;
-    }
+    // create surprise label
+    surpriseLabel = new QLabel(this);
+    surpriseLabel->setText("Surprise !!");
+    surpriseLabel->setAlignment(Qt::AlignBottom | Qt::AlignRight);
+    surpriseLabel->setGeometry(470, 360, 100, 100);
 }
 
 void GameWindow::addBlock(int id, int x, int y, int type) {
@@ -88,18 +100,20 @@ void GameWindow::setScoreLabel(int score) {
     string text = to_string(totalPoints);
     const QString& qString= text.c_str();
     pointsLabel->setText("Points: " + qString);
-    pointsLabel->setAlignment(Qt::AlignBottom | Qt::AlignRight);
-    pointsLabel->setGeometry(470, 400, 100, 100);
     pointsLabel->setVisible(true);
-
 }
 
 void GameWindow::setDepthLabel(int depthLevel) {
     string text = to_string(depthLevel);
     const QString& qString= text.c_str();
     depthLabel->setText("Depth Level: " + qString);
-    depthLabel->setAlignment(Qt::AlignBottom | Qt::AlignRight);
-    depthLabel->setGeometry(470, 380, 100, 100);
     depthLabel->setVisible(true);
+}
 
+void GameWindow::setSurpriseLabel(){
+    surpriseLabel->setVisible(true);
+}
+
+QLabel *GameWindow::getSurpriseLabel() const {
+    return surpriseLabel;
 }

@@ -10,11 +10,22 @@
 class GameLoop: public QObject, public QGraphicsRectItem {
     Q_OBJECT
 private:
-    Client * client;
+    Client * client; /**<initial client*/
 
 public:
+    /** Constructor.
+     *
+     * @param parent
+     */
     GameLoop(QGraphicsItem *parent=NULL);
+    /** Destructor.
+     *
+     */
     ~GameLoop() override;
+    /** Gets client.
+     *
+     * @param client
+     */
     void receiveClient(Client * client);
 
 public slots:

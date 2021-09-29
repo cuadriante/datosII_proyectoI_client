@@ -18,31 +18,62 @@
 #include <unistd.h>
 
 
+/** @brief Block class used for displaying blocks.
+
+    Blocks with set type and qualities.
+    @author cuadriante
+    @date September 2021
+    */
 
 
 class Block: public QObject, public QGraphicsRectItem {
 Q_OBJECT
 
 private:
-    int id;
-    int type;
-    int hitsToBreak;
+    int id; /**<initial id*/
+    int type; /**<initial type*/
+    int hitsToBreak; /**<initial hits to break*/
 
 
 public:
+    /** Constructor.
+     *
+     * @param parent
+     */
     Block(QGraphicsItem *parent = NULL);
+    /** Destructor.
+     *
+     */
     ~Block() override;
-
+    /** Returns type.
+     *
+     * @return
+     */
     int getType() const;
-
+    /** Sets type.
+     *
+     * @param type
+     */
     void setType(int type);
-
+    /** Returns hits to break.
+     *
+     * @return
+     */
     int getHitsToBreak() const;
-
+    /** Sets hits to break.
+     *
+     * @param hitsToBreak
+     */
     void setHitsToBreak(int hitsToBreak);
-
+    /** Returns id.
+     *
+     * @return
+     */
     int getId() const;
-
+    /** Sets id.
+     *
+     * @param id
+     */
     void setId(int id);
 
 };

@@ -22,14 +22,20 @@
 
 
 class Ball: public QObject, public QGraphicsEllipseItem {
+
     Q_OBJECT
+
 public:
+    /** Constructor.
+     *
+     * @param parent
+     */
     Ball(QGraphicsItem *parent=NULL);
+    /** Destructor.
+     *
+     */
     ~Ball() override;
 
-private:
-    double Vx;
-    double Vy;
 };
 
 #endif //DATOSII_PROYECTOI_CLIENT_BALL_H

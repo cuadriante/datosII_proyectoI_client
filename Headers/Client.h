@@ -21,20 +21,34 @@
 using namespace std;
 
 class Client{
-private:
-    int clientSocketId;
-    struct sockaddr_in clientSocketInfo;
-    int clientSocketInfoLen = sizeof(clientSocketInfo);
-    int serverSocketPort = 4050;
-    Socket * clientSocket;
-    //GameWindow * gameWindow;
-public:
-    Client();
-    bool connectSocket();
-    //void gameLoop();
-    Command * getNextCommand();
-    Socket *getClientSocket() const;
 
+private:
+    int clientSocketId; /**<initial client socket id*/
+    struct sockaddr_in clientSocketInfo; /**<initial client socket information*/
+    int clientSocketInfoLen = sizeof(clientSocketInfo); /**<initial length of client socket information*/
+    int serverSocketPort = 4050; /**<initial server socket port*/
+    Socket * clientSocket; /**<initial client socket*/
+
+public:
+    /**Constructor.
+     *
+     */
+    Client();
+    /**Connects socket to server.
+     *
+     * @return
+     */
+    bool connectSocket();
+    /** Returns command comming from server.
+     *
+     * @return
+     */
+    Command * getNextCommand();
+    /** Returns client socket.
+     *
+     * @return
+     */
+    Socket *getClientSocket() const;
 };
 
 

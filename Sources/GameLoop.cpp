@@ -39,15 +39,18 @@ void GameLoop::loop() {
                 PlayerBar * playerBar = gameWindow->getPlayerBar();
                 playerBar->setX(x);
                 playerBar->setY(y);
-                playerBar->setSize(size);
-                //playerBar->setFlag(QGraphicsItem::ItemIsFocusable);
-                //playerBar->setFocus();
+                if (gameWindow->getSurpriseLabel()->isVisible()){
+                    gameWindow->getSurpriseLabel()->setVisible(false);
+                }
                 break;
             }
             case Command::ACTION_DELETE_BLOCK:{
                 int id = c->getId();
                 Block * block = gameWindow->getBlocklist().at(id);
                 block->hide();
+                if (block->getType() == Command::BLOCK_TYPE_SURPRISE){
+                    gameWindow->setSurpriseLabel();
+                }
                 break;
             }
             case Command::ACTION_SET_SCORE: {
@@ -58,6 +61,11 @@ void GameLoop::loop() {
             case Command::ACTION_SET_DEPTH_LEVEL: {
                 int depthLevel = c->getSize();
                 gameWindow->setDepthLabel(depthLevel);
+                break;
+            }
+            case Command::ACTION_SET_PLAYER_BAR_SIZE: {
+                int newSize = c->getSize();
+                gameWindow->getPlayerBar()->setSize(newSize);
                 break;
             }
         }

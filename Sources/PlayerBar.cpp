@@ -31,19 +31,12 @@ void PlayerBar::keyPressEvent(QKeyEvent *event) {
         if (posX < 0) {
             posX = 0;
         }
-        //Command c;
-        //c.setAction(c.ACTION_MOVE_LEFT);
-        //clientSocket->sendCommand(c);
 
     } else if (event->key() == Qt::Key_Right) {
         posX = posX + 10;
         if (posX > 500) {
             posX = 500;
         }
-        //Command c;
-        //c.setAction(c.ACTION_MOVE_RIGHT);
-        //clientSocket->sendCommand(c);
-        //setPos(x() + 10, y());
     }
 
     if (posX != prevx || posY != prevy) {
@@ -54,13 +47,6 @@ void PlayerBar::keyPressEvent(QKeyEvent *event) {
         c.setPosY(posY);
         clientSocket->sendCommand(c);
     }
-
-
-
-}
-
-double PlayerBar::getItemCenter() {
-    return x() + rect().width() / 2;
 }
 
 int PlayerBar::getSize() const {
@@ -68,6 +54,7 @@ int PlayerBar::getSize() const {
 }
 
 void PlayerBar::setSize(int size) {
+    setRect(0, 0, size, 15);
     PlayerBar::size = size;
 }
 
