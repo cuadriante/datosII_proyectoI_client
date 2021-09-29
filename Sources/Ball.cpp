@@ -11,7 +11,7 @@
 
 
 Ball::Ball(QGraphicsItem *parent){
-    int radius = 20;
+    int radius = 15;
     setRect(-5,-5,radius,radius);
     QBrush brush;
     brush.setStyle(Qt::SolidPattern);

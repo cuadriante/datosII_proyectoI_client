@@ -55,6 +55,11 @@ void GameLoop::loop() {
                 gameWindow->setScoreLabel(score);
                 break;
             }
+            case Command::ACTION_SET_DEPTH_LEVEL: {
+                int depthLevel = c->getSize();
+                gameWindow->setDepthLabel(depthLevel);
+                break;
+            }
         }
     }
 

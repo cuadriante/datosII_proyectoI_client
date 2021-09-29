@@ -30,8 +30,10 @@ private:
     Ball * ball;
     vector<Block *> blocklist;
     PlayerBar * playerBar;
-    QLabel * label;
+    QLabel * pointsLabel;
+    QLabel * depthLabel;
     int totalPoints = 0;
+    int depthLevel = 0;
 
 public:
     //attributes
@@ -54,6 +56,8 @@ public:
     void setPlayerBar(PlayerBar *playerBar);
 
     void setScoreLabel(int score);
+
+    void setDepthLabel(int depthLevel);
 };
 
 #endif //DATOSII_PROYECTOI_CLIENT_GAMEWINDOW_H

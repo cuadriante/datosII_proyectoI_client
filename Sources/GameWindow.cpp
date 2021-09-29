@@ -27,12 +27,19 @@ void GameWindow::start() {
     ball->setPos(0, 700);
     scene->addItem(ball);
 
-    // create points label
-    label = new QLabel(this);
-    label->setText("Points: 0");
-    label->setAlignment(Qt::AlignBottom | Qt::AlignRight);
-    label->setGeometry(470,400,100,100);
-    label->setVisible(true);
+    // create points pointsLabel
+    pointsLabel = new QLabel(this);
+    pointsLabel->setText("Points: 0");
+    pointsLabel->setAlignment(Qt::AlignBottom | Qt::AlignRight);
+    pointsLabel->setGeometry(470, 400, 100, 100);
+    pointsLabel->setVisible(true);
+
+    // create depth level label
+    depthLabel = new QLabel(this);
+    depthLabel->setText("Depth Level: 0");
+    depthLabel->setAlignment(Qt::AlignBottom | Qt::AlignRight);
+    depthLabel->setGeometry(470, 380, 100, 100);
+    depthLabel->setVisible(true);
 
 
     Client* client = new Client();
@@ -46,10 +53,6 @@ void GameWindow::start() {
         exit;
     }
 }
-
-
-
-
 
 void GameWindow::addBlock(int id, int x, int y, int type) {
     Block * block = new Block();
@@ -84,10 +87,19 @@ void GameWindow::setScoreLabel(int score) {
     totalPoints = totalPoints + score;
     string text = to_string(totalPoints);
     const QString& qString= text.c_str();
-    label->setText("Points: " + qString);
-    label->setAlignment(Qt::AlignBottom | Qt::AlignRight);
-    label->setGeometry(470,400,100,100);
-    label->setVisible(true);
+    pointsLabel->setText("Points: " + qString);
+    pointsLabel->setAlignment(Qt::AlignBottom | Qt::AlignRight);
+    pointsLabel->setGeometry(470, 400, 100, 100);
+    pointsLabel->setVisible(true);
 
 }
 
+void GameWindow::setDepthLabel(int depthLevel) {
+    string text = to_string(depthLevel);
+    const QString& qString= text.c_str();
+    depthLabel->setText("Depth Level: " + qString);
+    depthLabel->setAlignment(Qt::AlignBottom | Qt::AlignRight);
+    depthLabel->setGeometry(470, 380, 100, 100);
+    depthLabel->setVisible(true);
+
+}
