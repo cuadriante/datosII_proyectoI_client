@@ -32,6 +32,7 @@
 using namespace std;
 
 class GameWindow: public QGraphicsView {
+    Q_OBJECT
 private:
     Ball * ball; /**<initial ball*/
     vector<Block *> blocklist; /**<initial blockList*/
@@ -117,8 +118,12 @@ public:
 
     vector<Block *> &getOtherPlayers();
 
+    void askForPlayerName();
+
 private slots:
-    void clickedSlot(bool clicked);
+    void clickedSlot();
+
+
 };
 
 #endif //DATOSII_PROYECTOI_CLIENT_GAMEWINDOW_H

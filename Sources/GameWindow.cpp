@@ -23,27 +23,6 @@ void GameWindow::start() {
 //    nameDialog->setVisible(true);
 //    nameDialog->setModal(true);
 
-    titleLabel = new QLabel(this);
-    titleLabel->setText("Crazy Breakout \n ver 0.1");
-    titleLabel->setAlignment(Qt::AlignCenter);
-    titleLabel->setGeometry(230, 100, 150, 100);
-    titleLabel->setVisible(true);
-
-    nameTextInput = new QLineEdit(this);
-    nameTextInput->setPlaceholderText("Player name");
-    nameTextInput->setMaxLength(20);
-    nameTextInput->setGeometry(240, 250, 120, 25);
-    nameTextInput->setVisible(true);
-
-    nameInputButton = new QPushButton(this);
-    nameInputButton->setGeometry(266, 290, 70, 25);
-    nameInputButton->setText("OK");
-    nameInputButton->setVisible(true);
-    //QObject::connect(nameInputButton, SIGNAL(clicked()), this, SLOT(clickedSlot()));
-    connect(nameInputButton, SIGNAL(clicked(bool)), this, SLOT(clickedSlot(bool)));
-
-    //QString str = nameTextInput->text();
-
     //create player bar
     playerBar = new PlayerBar();
     playerBar->setPos(700,700);
@@ -70,6 +49,27 @@ void GameWindow::start() {
         cout << "Could not connect to server." << endl;
         exit;
     }
+}
+
+void GameWindow::askForPlayerName() {
+    titleLabel = new QLabel(this);
+    titleLabel->setText("Crazy Breakout \n ver 0.1");
+    titleLabel->setAlignment(Qt::AlignCenter);
+    titleLabel->setGeometry(230, 100, 150, 100);
+    titleLabel->setVisible(true);
+
+    nameTextInput = new QLineEdit(this);
+    nameTextInput->setPlaceholderText("Player name");
+    nameTextInput->setMaxLength(20);
+    nameTextInput->setGeometry(240, 250, 120, 25);
+    nameTextInput->setVisible(true);
+
+    nameInputButton = new QPushButton(this);
+    nameInputButton->setGeometry(266, 290, 70, 25);
+    nameInputButton->setText("OK");
+    nameInputButton->setVisible(true);
+    //QObject::connect(nameInputButton, SIGNAL(clicked()), this, SLOT(clickedSlot()));
+    connect(nameInputButton, SIGNAL(clicked()), this, SLOT(clickedSlot()));
 }
 
 void GameWindow::createLabels() {// create points pointsLabel
@@ -152,10 +152,16 @@ vector<Block *> &GameWindow::getOtherPlayers() {
     return otherPlayers;
 }
 
-void GameWindow::clickedSlot(bool clicked) {
-    if (clicked) {
-        qDebug() << "m";
-    }
+void GameWindow::clickedSlot() {
+    QString str = nameTextInput->text();
+    qDebug() << "Button pressed";
+
+    titleLabel->setVisible(false);
+    nameInputButton->setVisible(false);
+    nameTextInput->setVisible(false);
+
+    start();
+
 
 }
 

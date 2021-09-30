@@ -11,7 +11,8 @@ int main(int argc, char** argv) {
 
     gameWindow = new GameWindow();
     gameWindow->show();
-    gameWindow->start();
+    gameWindow->askForPlayerName();
+    //gameWindow->start();
 
     return app.exec();
 }
