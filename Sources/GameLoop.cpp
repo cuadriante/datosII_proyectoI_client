@@ -86,6 +86,14 @@ void GameLoop::loop() {
                 gameWindow->getPlayerBar()->setSize(newSize);
                 break;
             }
+            case Command::ACTION_END_GAME: {
+                gameWindow->endGame();
+                break;
+            }
+            case Command::ACTION_WIN_GAME: {
+                gameWindow->setWon(true);
+                gameWindow->endGame();
+            }
         }
     }
 

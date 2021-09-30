@@ -34,6 +34,9 @@ using namespace std;
 
 class GameWindow: public QGraphicsView {
     Q_OBJECT
+
+
+
 private:
     Ball * ball; /**<initial ball*/
     vector<Block *> blocklist; /**<initial blockList*/
@@ -49,6 +52,7 @@ private:
     int depthLevel = 0; /**<initial depth level*/
     QLineEdit *nameTextInput;
     QPushButton *nameInputButton;
+    bool won = false;
 
 
 public:
@@ -122,6 +126,11 @@ public:
     vector<Block *> &getOtherPlayers();
 
     void askForPlayerName();
+    void endGame();
+
+    bool isWon() const;
+
+    void setWon(bool won);
 
 private slots:
     void clickedSlot();

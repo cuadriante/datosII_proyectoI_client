@@ -141,7 +141,7 @@ void GameWindow::setScoreLabel(int score) {
     totalPoints = totalPoints + score;
     string text = to_string(totalPoints);
     const QString& qString= text.c_str();
-    pointsLabel->setText("Points: " + qString);
+    pointsLabel->setText("Score: " + qString);
     pointsLabel->setVisible(true);
 }
 
@@ -176,5 +176,40 @@ void GameWindow::clickedSlot() {
     start();
 
 
+}
+
+void GameWindow::endGame() {
+    for(Block * otherPlayer: otherPlayers){
+        otherPlayer->setVisible(false);
+    }
+    for(Block * block: blocklist){
+        block->setVisible(false);
+    }
+    playerBar->setVisible(false);
+    depthLabel->setVisible(false);
+    pointsLabel->setVisible(false);
+    surpriseLabel->setVisible(false);
+    playerLabel->setVisible(false);
+
+    if (!won) {
+        titleLabel->setText("You lost :(. \n Try again?");
+        titleLabel->setVisible(true);
+    } else {
+
+        string text = to_string(totalPoints);
+        const QString& qString= text.c_str();
+        titleLabel->setText("You won! \n  Your score: " + qString);
+        titleLabel->setVisible(true);
+    }
+
+
+}
+
+bool GameWindow::isWon() const {
+    return won;
+}
+
+void GameWindow::setWon(bool won) {
+    GameWindow::won = won;
 }
 
