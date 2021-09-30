@@ -7,6 +7,7 @@
 
 /** @brief Client class used for communication with server.
 
+    Connects to server and sends and receives commands.
     @author cuadriante
     @date September 2021
     */

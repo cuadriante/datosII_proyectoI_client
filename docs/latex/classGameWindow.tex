@@ -11,7 +11,7 @@ Inheritance diagram for Game\+Window\+:\begin{figure}[H]
 \item 
 \mbox{\hyperlink{classGameWindow_a866f35fe19d2f1a3c35fcc234c6e195d}{Game\+Window}} (QWidget $\ast$parent=NULL)
 \item 
-void \mbox{\hyperlink{classGameWindow_a1660a50374b8b9467886b63c084efc77}{add\+Block}} (int id, int x, int y, int type)
+void \mbox{\hyperlink{classGameWindow_af85a0a69702dbb25afe22e8e59d7b2c6}{add\+Block}} (int id, int x, int y, int type, int hits\+To\+Break)
 \item 
 void \mbox{\hyperlink{classGameWindow_a43b1f9fd920d6ceb7284f1f15c5e4958}{start}} ()
 \item 
@@ -34,6 +34,12 @@ void \mbox{\hyperlink{classGameWindow_a00e0f4b09490a608f71161c57322eaba}{set\+Su
 QLabel $\ast$ \mbox{\hyperlink{classGameWindow_a0a405ff0d040b273587292210e706b5f}{get\+Surprise\+Label}} () const
 \item 
 void \mbox{\hyperlink{classGameWindow_a30f9a105a0dabbb5c28c7f82632dec2c}{create\+Labels}} ()
+\item 
+\mbox{\Hypertarget{classGameWindow_a0ee870824cd5d5585d5d1dab61d273a9}\label{classGameWindow_a0ee870824cd5d5585d5d1dab61d273a9}} 
+vector$<$ \mbox{\hyperlink{classBlock}{Block}} $\ast$ $>$ \& {\bfseries get\+Other\+Players} ()
+\item 
+\mbox{\Hypertarget{classGameWindow_a884517088d4091302e2c235cf31dbb6a}\label{classGameWindow_a884517088d4091302e2c235cf31dbb6a}} 
+void {\bfseries ask\+For\+Player\+Name} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -45,7 +51,7 @@ QGraphics\+Scene $\ast$ \mbox{\hyperlink{classGameWindow_a30e66f8824cf672da87f29
 \doxysubsection{Detailed Description}
 
 
-Definition at line \mbox{\hyperlink{GameWindow_8h_source_l00034}{34}} of file \mbox{\hyperlink{GameWindow_8h_source}{Game\+Window.\+h}}.
+Definition at line \mbox{\hyperlink{GameWindow_8h_source_l00035}{35}} of file \mbox{\hyperlink{GameWindow_8h_source}{Game\+Window.\+h}}.
 
 
 
@@ -66,11 +72,11 @@ Graphic scene Constructor
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classGameWindow_a1660a50374b8b9467886b63c084efc77}\label{classGameWindow_a1660a50374b8b9467886b63c084efc77}} 
+\mbox{\Hypertarget{classGameWindow_af85a0a69702dbb25afe22e8e59d7b2c6}\label{classGameWindow_af85a0a69702dbb25afe22e8e59d7b2c6}} 
 \index{GameWindow@{GameWindow}!addBlock@{addBlock}}
 \index{addBlock@{addBlock}!GameWindow@{GameWindow}}
 \doxysubsubsection{\texorpdfstring{addBlock()}{addBlock()}}
-{\footnotesize\ttfamily void Game\+Window\+::add\+Block (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{type }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Game\+Window\+::add\+Block (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{type,  }\item[{int}]{hits\+To\+Break }\end{DoxyParamCaption})}
 
 Adds block to game window.
 
@@ -210,7 +216,7 @@ Initializes game.
 
 
 
-Definition at line \mbox{\hyperlink{GameWindow_8h_source_l00046}{46}} of file \mbox{\hyperlink{GameWindow_8h_source}{Game\+Window.\+h}}.
+Definition at line \mbox{\hyperlink{GameWindow_8h_source_l00055}{55}} of file \mbox{\hyperlink{GameWindow_8h_source}{Game\+Window.\+h}}.
 
 
 

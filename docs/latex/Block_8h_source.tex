@@ -5,42 +5,45 @@
 \DoxyCodeLine{\Hypertarget{Block_8h_source_l00001}00001 \textcolor{comment}{//}}
 \DoxyCodeLine{\Hypertarget{Block_8h_source_l00002}00002 \textcolor{comment}{// Created by cuadriante on 21/9/21.}}
 \DoxyCodeLine{\Hypertarget{Block_8h_source_l00003}00003 \textcolor{comment}{//}}
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00004}00004 }
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00005}00005 \textcolor{preprocessor}{\#ifndef DATOSII\_PROYECTOI\_CLIENT\_BLOCK\_H}}
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00006}00006 \textcolor{preprocessor}{\#define DATOSII\_PROYECTOI\_CLIENT\_BLOCK\_H}}
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00007}00007 }
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00008}00008 \textcolor{preprocessor}{\#include <QGraphicsView>}}
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00009}00009 \textcolor{preprocessor}{\#include <QGraphicsScene>}}
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00010}00010 \textcolor{preprocessor}{\#include <QtWidgets>}}
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00011}00011 \textcolor{preprocessor}{\#include <QGraphicsItem>}}
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00012}00012 \textcolor{preprocessor}{\#include <QGraphicsRectItem>}}
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00013}00013 \textcolor{preprocessor}{\#include <QTimer>}}
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00014}00014 \textcolor{preprocessor}{\#include <QBrush>}}
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00015}00015 \textcolor{preprocessor}{\#include <QDebug>}}
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00016}00016 \textcolor{preprocessor}{\#include <QKeyEvent>}}
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00017}00017 \textcolor{preprocessor}{\#include <QApplication>}}
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00018}00018 \textcolor{preprocessor}{\#include <unistd.h>}}
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00019}00019 }
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00020}00020 }
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00029}\mbox{\hyperlink{classBlock}{00029}} \textcolor{keyword}{class }\mbox{\hyperlink{classBlock}{Block}}: \textcolor{keyword}{public} QObject, \textcolor{keyword}{public} QGraphicsRectItem \{}
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00030}00030 Q\_OBJECT}
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00031}00031 }
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00032}00032 \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00033}00033     \textcolor{keywordtype}{int} id; }
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00034}00034     \textcolor{keywordtype}{int} type; }
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00035}00035     \textcolor{keywordtype}{int} hitsToBreak; }
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00038}00038 \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00043}\mbox{\hyperlink{classBlock_afbbef03396da328e56f32786356aa2ea}{00043}}     \mbox{\hyperlink{classBlock_afbbef03396da328e56f32786356aa2ea}{Block}}(QGraphicsItem *parent = NULL);}
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00047}\mbox{\hyperlink{classBlock_a8e35c9089e806962b83bca4e5e288142}{00047}}     \mbox{\hyperlink{classBlock_a8e35c9089e806962b83bca4e5e288142}{\string~Block}}() \textcolor{keyword}{override};}
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00052}\mbox{\hyperlink{classBlock_a08713ead505b9ba10d9351f392d308d0}{00052}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{classBlock_a08713ead505b9ba10d9351f392d308d0}{getType}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00057}\mbox{\hyperlink{classBlock_a4af5ff6c3a0a0d1d06956b92ff4270c7}{00057}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classBlock_a4af5ff6c3a0a0d1d06956b92ff4270c7}{setType}}(\textcolor{keywordtype}{int} type);}
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00062}\mbox{\hyperlink{classBlock_afc05b6fd83f8c422e5e37b38bacf47f8}{00062}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{classBlock_afc05b6fd83f8c422e5e37b38bacf47f8}{getHitsToBreak}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00067}\mbox{\hyperlink{classBlock_ae0e2d39a818be3ea7b966e5a40d1ae6f}{00067}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classBlock_ae0e2d39a818be3ea7b966e5a40d1ae6f}{setHitsToBreak}}(\textcolor{keywordtype}{int} hitsToBreak);}
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00072}\mbox{\hyperlink{classBlock_a66d1517962d349882e133bbb86faca3b}{00072}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{classBlock_a66d1517962d349882e133bbb86faca3b}{getId}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00077}\mbox{\hyperlink{classBlock_a3d8b5a71e5731039dff991ebae7d8468}{00077}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classBlock_a3d8b5a71e5731039dff991ebae7d8468}{setId}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id});}
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00078}00078 }
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00079}00079 \};}
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00011}00011 \textcolor{comment}{}\textcolor{preprocessor}{\#ifndef DATOSII\_PROYECTOI\_CLIENT\_BLOCK\_H}}
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00012}00012 \textcolor{preprocessor}{\#define DATOSII\_PROYECTOI\_CLIENT\_BLOCK\_H}}
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00016}00016 \textcolor{preprocessor}{\#include <QGraphicsView>}}
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00017}00017 \textcolor{preprocessor}{\#include <QGraphicsScene>}}
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00018}00018 \textcolor{preprocessor}{\#include <QtWidgets>}}
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00019}00019 \textcolor{preprocessor}{\#include <QGraphicsItem>}}
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00020}00020 \textcolor{preprocessor}{\#include <QGraphicsRectItem>}}
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00021}00021 \textcolor{preprocessor}{\#include <QTimer>}}
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00022}00022 \textcolor{preprocessor}{\#include <QBrush>}}
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00023}00023 \textcolor{preprocessor}{\#include <QDebug>}}
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00024}00024 \textcolor{preprocessor}{\#include <QKeyEvent>}}
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00025}00025 \textcolor{preprocessor}{\#include <QApplication>}}
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00026}00026 \textcolor{preprocessor}{\#include <unistd.h>}}
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00031}\mbox{\hyperlink{classBlock}{00031}} \textcolor{keyword}{class }\mbox{\hyperlink{classBlock}{Block}}: \textcolor{keyword}{public} QObject, \textcolor{keyword}{public} QGraphicsRectItem \{}
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00032}00032 Q\_OBJECT}
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00034}00034 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00035}00035     \textcolor{keywordtype}{int} id; }
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00036}00036     \textcolor{keywordtype}{int} type; }
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00037}00037     \textcolor{keywordtype}{int} hitsToBreak; }
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00040}00040 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00045}\mbox{\hyperlink{classBlock_afbbef03396da328e56f32786356aa2ea}{00045}}     \mbox{\hyperlink{classBlock_afbbef03396da328e56f32786356aa2ea}{Block}}(QGraphicsItem *parent = NULL);}
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00049}\mbox{\hyperlink{classBlock_a8e35c9089e806962b83bca4e5e288142}{00049}}     \mbox{\hyperlink{classBlock_a8e35c9089e806962b83bca4e5e288142}{\string~Block}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00054}\mbox{\hyperlink{classBlock_a08713ead505b9ba10d9351f392d308d0}{00054}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{classBlock_a08713ead505b9ba10d9351f392d308d0}{getType}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00059}\mbox{\hyperlink{classBlock_a4af5ff6c3a0a0d1d06956b92ff4270c7}{00059}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classBlock_a4af5ff6c3a0a0d1d06956b92ff4270c7}{setType}}(\textcolor{keywordtype}{int} type);}
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00064}\mbox{\hyperlink{classBlock_afc05b6fd83f8c422e5e37b38bacf47f8}{00064}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{classBlock_afc05b6fd83f8c422e5e37b38bacf47f8}{getHitsToBreak}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00069}\mbox{\hyperlink{classBlock_ae0e2d39a818be3ea7b966e5a40d1ae6f}{00069}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classBlock_ae0e2d39a818be3ea7b966e5a40d1ae6f}{setHitsToBreak}}(\textcolor{keywordtype}{int} hitsToBreak);}
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00074}\mbox{\hyperlink{classBlock_a66d1517962d349882e133bbb86faca3b}{00074}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{classBlock_a66d1517962d349882e133bbb86faca3b}{getId}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00079}\mbox{\hyperlink{classBlock_a3d8b5a71e5731039dff991ebae7d8468}{00079}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classBlock_a3d8b5a71e5731039dff991ebae7d8468}{setId}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id});}
 \DoxyCodeLine{\Hypertarget{Block_8h_source_l00080}00080 }
-\DoxyCodeLine{\Hypertarget{Block_8h_source_l00081}00081 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//DATOSII\_PROYECTOI\_CLIENT\_BLOCK\_H}}
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00081}00081 \};}
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{Block_8h_source_l00083}00083 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//DATOSII\_PROYECTOI\_CLIENT\_BLOCK\_H}}
 
 \end{DoxyCode}

@@ -7,6 +7,7 @@
 
 /** @brief GameWindow class used for displaying displaying game.
 
+    Creates game window elements and displays them.
     @author cuadriante
     @date September 2021
     */

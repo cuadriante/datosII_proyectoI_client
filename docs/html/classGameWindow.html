@@ -80,8 +80,8 @@ Inheritance diagram for GameWindow:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a866f35fe19d2f1a3c35fcc234c6e195d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameWindow.html#a866f35fe19d2f1a3c35fcc234c6e195d">GameWindow</a> (QWidget *parent=NULL)</td></tr>
 <tr class="separator:a866f35fe19d2f1a3c35fcc234c6e195d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1660a50374b8b9467886b63c084efc77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameWindow.html#a1660a50374b8b9467886b63c084efc77">addBlock</a> (int id, int x, int y, int type)</td></tr>
-<tr class="separator:a1660a50374b8b9467886b63c084efc77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af85a0a69702dbb25afe22e8e59d7b2c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameWindow.html#af85a0a69702dbb25afe22e8e59d7b2c6">addBlock</a> (int id, int x, int y, int type, int hitsToBreak)</td></tr>
+<tr class="separator:af85a0a69702dbb25afe22e8e59d7b2c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43b1f9fd920d6ceb7284f1f15c5e4958"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameWindow.html#a43b1f9fd920d6ceb7284f1f15c5e4958">start</a> ()</td></tr>
 <tr class="separator:a43b1f9fd920d6ceb7284f1f15c5e4958"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdb3a3a69306d6a032cae822b30f4a29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBall.html">Ball</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameWindow.html#abdb3a3a69306d6a032cae822b30f4a29">getBall</a> () const</td></tr>
@@ -104,6 +104,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0a405ff0d040b273587292210e706b5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30f9a105a0dabbb5c28c7f82632dec2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameWindow.html#a30f9a105a0dabbb5c28c7f82632dec2c">createLabels</a> ()</td></tr>
 <tr class="separator:a30f9a105a0dabbb5c28c7f82632dec2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ee870824cd5d5585d5d1dab61d273a9"><td class="memItemLeft" align="right" valign="top"><a id="a0ee870824cd5d5585d5d1dab61d273a9" name="a0ee870824cd5d5585d5d1dab61d273a9"></a>
+vector&lt; <a class="el" href="classBlock.html">Block</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getOtherPlayers</b> ()</td></tr>
+<tr class="separator:a0ee870824cd5d5585d5d1dab61d273a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a884517088d4091302e2c235cf31dbb6a"><td class="memItemLeft" align="right" valign="top"><a id="a884517088d4091302e2c235cf31dbb6a" name="a884517088d4091302e2c235cf31dbb6a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>askForPlayerName</b> ()</td></tr>
+<tr class="separator:a884517088d4091302e2c235cf31dbb6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -112,7 +118,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="GameWindow_8h_source.html#l00034">34</a> of file <a class="el" href="GameWindow_8h_source.html">GameWindow.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GameWindow_8h_source.html#l00035">35</a> of file <a class="el" href="GameWindow_8h_source.html">GameWindow.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a866f35fe19d2f1a3c35fcc234c6e195d" name="a866f35fe19d2f1a3c35fcc234c6e195d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a866f35fe19d2f1a3c35fcc234c6e195d">&#9670;&nbsp;</a></span>GameWindow()</h2>
@@ -140,8 +146,8 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1660a50374b8b9467886b63c084efc77" name="a1660a50374b8b9467886b63c084efc77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1660a50374b8b9467886b63c084efc77">&#9670;&nbsp;</a></span>addBlock()</h2>
+<a id="af85a0a69702dbb25afe22e8e59d7b2c6" name="af85a0a69702dbb25afe22e8e59d7b2c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af85a0a69702dbb25afe22e8e59d7b2c6">&#9670;&nbsp;</a></span>addBlock()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -168,7 +174,13 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>type</em>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hitsToBreak</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -433,7 +445,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="GameWindow_8h_source.html#l00046">46</a> of file <a class="el" href="GameWindow_8h_source.html">GameWindow.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GameWindow_8h_source.html#l00055">55</a> of file <a class="el" href="GameWindow_8h_source.html">GameWindow.h</a>.</p>
 
 </div>
 </div>

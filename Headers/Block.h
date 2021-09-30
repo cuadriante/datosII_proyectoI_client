@@ -1,16 +1,17 @@
 //
 // Created by cuadriante on 21/9/21.
 //
-
-#ifndef DATOSII_PROYECTOI_CLIENT_BLOCK_H
-#define DATOSII_PROYECTOI_CLIENT_BLOCK_H
-
 /** @brief Block class used for displaying blocks.
 
     Blocks with set type and qualities.
     @author cuadriante
     @date September 2021
     */
+
+#ifndef DATOSII_PROYECTOI_CLIENT_BLOCK_H
+#define DATOSII_PROYECTOI_CLIENT_BLOCK_H
+
+
 
 #include <QGraphicsView>
 #include <QGraphicsScene>

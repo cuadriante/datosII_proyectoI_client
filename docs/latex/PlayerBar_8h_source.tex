@@ -9,36 +9,38 @@
 \DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00005}00005 \textcolor{preprocessor}{\#ifndef DATOSII\_PROYECTOI\_CLIENT\_PLAYERBAR\_H}}
 \DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00006}00006 \textcolor{preprocessor}{\#define DATOSII\_PROYECTOI\_CLIENT\_PLAYERBAR\_H}}
 \DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00007}00007 }
-\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00008}00008 \textcolor{preprocessor}{\#include <QGraphicsView>}}
-\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00009}00009 \textcolor{preprocessor}{\#include <QGraphicsScene>}}
-\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00010}00010 \textcolor{preprocessor}{\#include <QtWidgets>}}
-\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00011}00011 \textcolor{preprocessor}{\#include <QGraphicsItem>}}
-\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00012}00012 \textcolor{preprocessor}{\#include <QGraphicsRectItem>}}
-\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00013}00013 \textcolor{preprocessor}{\#include <QTimer>}}
-\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00014}00014 \textcolor{preprocessor}{\#include <QBrush>}}
-\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00015}00015 \textcolor{preprocessor}{\#include <QDebug>}}
-\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00016}00016 \textcolor{preprocessor}{\#include <QKeyEvent>}}
-\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00017}00017 \textcolor{preprocessor}{\#include <QApplication>}}
-\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00018}00018 \textcolor{preprocessor}{\#include <unistd.h>}}
-\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00019}00019 \textcolor{preprocessor}{\#include "{}Socket.h"{}}}
-\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00020}00020 }
-\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00028}\mbox{\hyperlink{classPlayerBar}{00028}} \textcolor{keyword}{class }\mbox{\hyperlink{classPlayerBar}{PlayerBar}}: \textcolor{keyword}{public} QGraphicsRectItem\{}
-\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00029}00029 \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00030}00030     \textcolor{keywordtype}{int} size; }
-\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00031}00031     \mbox{\hyperlink{classSocket}{Socket}} * clientSocket = NULL; }
-\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00033}00033 \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00038}\mbox{\hyperlink{classPlayerBar_ab766b19505d03fa08a6872fb57ad8a56}{00038}}     \mbox{\hyperlink{classPlayerBar_ab766b19505d03fa08a6872fb57ad8a56}{PlayerBar}}(QGraphicsItem *parent=NULL);}
-\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00039}00039 }
-\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00044}\mbox{\hyperlink{classPlayerBar_a71b84279c3afe2e22b2342ee638c9cde}{00044}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classPlayerBar_a71b84279c3afe2e22b2342ee638c9cde}{keyPressEvent}} (QKeyEvent * event);}
-\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00045}00045 }
-\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00050}\mbox{\hyperlink{classPlayerBar_a6caac00d399cc80ba6c93c7d51a06286}{00050}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{classPlayerBar_a6caac00d399cc80ba6c93c7d51a06286}{getSize}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00051}00051 }
-\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00056}\mbox{\hyperlink{classPlayerBar_aefb4a59475fd0b919759d6a1318a887d}{00056}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classPlayerBar_aefb4a59475fd0b919759d6a1318a887d}{setSize}}(\textcolor{keywordtype}{int} size);}
-\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00061}\mbox{\hyperlink{classPlayerBar_ae20f3e2be7c26e847289a45ba0024df2}{00061}}     \mbox{\hyperlink{classSocket}{Socket}} *\mbox{\hyperlink{classPlayerBar_ae20f3e2be7c26e847289a45ba0024df2}{getClientSocket}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00066}\mbox{\hyperlink{classPlayerBar_a5a244e93582992dd88cf435b69179025}{00066}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classPlayerBar_a5a244e93582992dd88cf435b69179025}{setClientSocket}}(\mbox{\hyperlink{classSocket}{Socket}} *clientSocket);}
-\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00067}00067 \};}
-\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00068}00068 }
-\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00069}00069 }
-\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00070}00070 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//DATOSII\_PROYECTOI\_CLIENT\_PLAYERBAR\_H}}
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00015}00015 \textcolor{preprocessor}{\#include <QGraphicsView>}}
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00016}00016 \textcolor{preprocessor}{\#include <QGraphicsScene>}}
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00017}00017 \textcolor{preprocessor}{\#include <QtWidgets>}}
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00018}00018 \textcolor{preprocessor}{\#include <QGraphicsItem>}}
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00019}00019 \textcolor{preprocessor}{\#include <QGraphicsRectItem>}}
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00020}00020 \textcolor{preprocessor}{\#include <QTimer>}}
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00021}00021 \textcolor{preprocessor}{\#include <QBrush>}}
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00022}00022 \textcolor{preprocessor}{\#include <QDebug>}}
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00023}00023 \textcolor{preprocessor}{\#include <QKeyEvent>}}
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00024}00024 \textcolor{preprocessor}{\#include <QApplication>}}
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00025}00025 \textcolor{preprocessor}{\#include <unistd.h>}}
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00026}00026 \textcolor{preprocessor}{\#include "{}Socket.h"{}}}
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00030}\mbox{\hyperlink{classPlayerBar}{00030}} \textcolor{keyword}{class }\mbox{\hyperlink{classPlayerBar}{PlayerBar}}: \textcolor{keyword}{public} QGraphicsRectItem\{}
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00031}00031 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00032}00032     \textcolor{keywordtype}{int} size; }
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00033}00033     \mbox{\hyperlink{classSocket}{Socket}} * clientSocket = NULL; }
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00035}00035 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00040}\mbox{\hyperlink{classPlayerBar_ab766b19505d03fa08a6872fb57ad8a56}{00040}}     \mbox{\hyperlink{classPlayerBar_ab766b19505d03fa08a6872fb57ad8a56}{PlayerBar}}(QGraphicsItem *parent=NULL);}
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00046}\mbox{\hyperlink{classPlayerBar_a71b84279c3afe2e22b2342ee638c9cde}{00046}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classPlayerBar_a71b84279c3afe2e22b2342ee638c9cde}{keyPressEvent}} (QKeyEvent * event);}
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00052}\mbox{\hyperlink{classPlayerBar_a6caac00d399cc80ba6c93c7d51a06286}{00052}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{classPlayerBar_a6caac00d399cc80ba6c93c7d51a06286}{getSize}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00058}\mbox{\hyperlink{classPlayerBar_aefb4a59475fd0b919759d6a1318a887d}{00058}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classPlayerBar_aefb4a59475fd0b919759d6a1318a887d}{setSize}}(\textcolor{keywordtype}{int} size);}
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00063}\mbox{\hyperlink{classPlayerBar_ae20f3e2be7c26e847289a45ba0024df2}{00063}}     \mbox{\hyperlink{classSocket}{Socket}} *\mbox{\hyperlink{classPlayerBar_ae20f3e2be7c26e847289a45ba0024df2}{getClientSocket}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00068}\mbox{\hyperlink{classPlayerBar_a5a244e93582992dd88cf435b69179025}{00068}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classPlayerBar_a5a244e93582992dd88cf435b69179025}{setClientSocket}}(\mbox{\hyperlink{classSocket}{Socket}} *clientSocket);}
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00069}00069 \};}
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{PlayerBar_8h_source_l00072}00072 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//DATOSII\_PROYECTOI\_CLIENT\_PLAYERBAR\_H}}
 
 \end{DoxyCode}

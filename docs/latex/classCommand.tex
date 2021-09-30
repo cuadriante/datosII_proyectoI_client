@@ -54,6 +54,8 @@ static const int \mbox{\hyperlink{classCommand_a567caf569156379277f22c954fbee065
 \item 
 static const int \mbox{\hyperlink{classCommand_ad0b35b3408dd5a3eec841cdc1f9d5f15}{ACTION\+\_\+\+SET\+\_\+\+PLAYER\+\_\+\+BAR\+\_\+\+SIZE}} = 18
 \item 
+static const int \mbox{\hyperlink{classCommand_a48c59acedb1bbee8d453f42fdee0c022}{ACTION\+\_\+\+MOVE\+\_\+\+OTHER\+\_\+\+PLAYER}} = 19
+\item 
 static const int \mbox{\hyperlink{classCommand_aee33de69f704679c7f7b6a6b1c52e24d}{ACTION\+\_\+\+START\+\_\+\+GAME}} = 20
 \item 
 static const int \mbox{\hyperlink{classCommand_a3d846d3d89f911b1a716d676b849eb2a}{ACTION\+\_\+\+MOVE\+\_\+\+LEFT}} = 21
@@ -79,7 +81,7 @@ static const int \mbox{\hyperlink{classCommand_a21d7a529d1d6316289b672a39c9137f0
 \doxysubsection{Detailed Description}
 
 
-Definition at line \mbox{\hyperlink{Command_8h_source_l00021}{21}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
+Definition at line \mbox{\hyperlink{Command_8h_source_l00022}{22}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
 
 
 
@@ -263,7 +265,7 @@ Sets type.
 
 action for block creation 
 
-Definition at line \mbox{\hyperlink{Command_8h_source_l00031}{31}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
+Definition at line \mbox{\hyperlink{Command_8h_source_l00032}{32}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
 
 \mbox{\Hypertarget{classCommand_a1a6b3a7dd0f8bb88bd9114f9ebde92de}\label{classCommand_a1a6b3a7dd0f8bb88bd9114f9ebde92de}} 
 \index{Command@{Command}!ACTION\_CREATE\_PLAYER@{ACTION\_CREATE\_PLAYER}}
@@ -273,7 +275,7 @@ Definition at line \mbox{\hyperlink{Command_8h_source_l00031}{31}} of file \mbox
 
 action for player creation 
 
-Definition at line \mbox{\hyperlink{Command_8h_source_l00025}{25}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
+Definition at line \mbox{\hyperlink{Command_8h_source_l00026}{26}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
 
 \mbox{\Hypertarget{classCommand_aa72194492016fe7310ce347274092523}\label{classCommand_aa72194492016fe7310ce347274092523}} 
 \index{Command@{Command}!ACTION\_DELETE\_BLOCK@{ACTION\_DELETE\_BLOCK}}
@@ -283,7 +285,7 @@ Definition at line \mbox{\hyperlink{Command_8h_source_l00025}{25}} of file \mbox
 
 action for block deletion 
 
-Definition at line \mbox{\hyperlink{Command_8h_source_l00029}{29}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
+Definition at line \mbox{\hyperlink{Command_8h_source_l00030}{30}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
 
 \mbox{\Hypertarget{classCommand_a45c67e378ca20767cc28819d9753d9ff}\label{classCommand_a45c67e378ca20767cc28819d9753d9ff}} 
 \index{Command@{Command}!ACTION\_END\_GAME@{ACTION\_END\_GAME}}
@@ -293,7 +295,7 @@ Definition at line \mbox{\hyperlink{Command_8h_source_l00029}{29}} of file \mbox
 
 action for game end 
 
-Definition at line \mbox{\hyperlink{Command_8h_source_l00038}{38}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
+Definition at line \mbox{\hyperlink{Command_8h_source_l00040}{40}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
 
 \mbox{\Hypertarget{classCommand_aceed989a9d23301313601c5b55fb58b0}\label{classCommand_aceed989a9d23301313601c5b55fb58b0}} 
 \index{Command@{Command}!ACTION\_MOVE\_BALL@{ACTION\_MOVE\_BALL}}
@@ -303,7 +305,7 @@ Definition at line \mbox{\hyperlink{Command_8h_source_l00038}{38}} of file \mbox
 
 action for ball movement 
 
-Definition at line \mbox{\hyperlink{Command_8h_source_l00027}{27}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
+Definition at line \mbox{\hyperlink{Command_8h_source_l00028}{28}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
 
 \mbox{\Hypertarget{classCommand_a72ebd9a8d1624e7904ebee1566314d6e}\label{classCommand_a72ebd9a8d1624e7904ebee1566314d6e}} 
 \index{Command@{Command}!ACTION\_MOVE\_BLOCK@{ACTION\_MOVE\_BLOCK}}
@@ -313,7 +315,7 @@ Definition at line \mbox{\hyperlink{Command_8h_source_l00027}{27}} of file \mbox
 
 action for block movement 
 
-Definition at line \mbox{\hyperlink{Command_8h_source_l00028}{28}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
+Definition at line \mbox{\hyperlink{Command_8h_source_l00029}{29}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
 
 \mbox{\Hypertarget{classCommand_a3d846d3d89f911b1a716d676b849eb2a}\label{classCommand_a3d846d3d89f911b1a716d676b849eb2a}} 
 \index{Command@{Command}!ACTION\_MOVE\_LEFT@{ACTION\_MOVE\_LEFT}}
@@ -323,7 +325,17 @@ Definition at line \mbox{\hyperlink{Command_8h_source_l00028}{28}} of file \mbox
 
 action for player movement to the left 
 
-Definition at line \mbox{\hyperlink{Command_8h_source_l00036}{36}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
+Definition at line \mbox{\hyperlink{Command_8h_source_l00038}{38}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
+
+\mbox{\Hypertarget{classCommand_a48c59acedb1bbee8d453f42fdee0c022}\label{classCommand_a48c59acedb1bbee8d453f42fdee0c022}} 
+\index{Command@{Command}!ACTION\_MOVE\_OTHER\_PLAYER@{ACTION\_MOVE\_OTHER\_PLAYER}}
+\index{ACTION\_MOVE\_OTHER\_PLAYER@{ACTION\_MOVE\_OTHER\_PLAYER}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{ACTION\_MOVE\_OTHER\_PLAYER}{ACTION\_MOVE\_OTHER\_PLAYER}}
+{\footnotesize\ttfamily const int Command\+::\+ACTION\+\_\+\+MOVE\+\_\+\+OTHER\+\_\+\+PLAYER = 19\hspace{0.3cm}{\ttfamily [static]}}
+
+action for other player movement setting 
+
+Definition at line \mbox{\hyperlink{Command_8h_source_l00035}{35}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
 
 \mbox{\Hypertarget{classCommand_a456a2ae02748b18ff9ed8c451df21900}\label{classCommand_a456a2ae02748b18ff9ed8c451df21900}} 
 \index{Command@{Command}!ACTION\_MOVE\_PLAYER@{ACTION\_MOVE\_PLAYER}}
@@ -333,7 +345,7 @@ Definition at line \mbox{\hyperlink{Command_8h_source_l00036}{36}} of file \mbox
 
 action for player movement 
 
-Definition at line \mbox{\hyperlink{Command_8h_source_l00026}{26}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
+Definition at line \mbox{\hyperlink{Command_8h_source_l00027}{27}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
 
 \mbox{\Hypertarget{classCommand_ac7c7e7fecf78684e4fd709118e4cab14}\label{classCommand_ac7c7e7fecf78684e4fd709118e4cab14}} 
 \index{Command@{Command}!ACTION\_MOVE\_RIGHT@{ACTION\_MOVE\_RIGHT}}
@@ -343,7 +355,7 @@ Definition at line \mbox{\hyperlink{Command_8h_source_l00026}{26}} of file \mbox
 
 action for player movement to the right 
 
-Definition at line \mbox{\hyperlink{Command_8h_source_l00037}{37}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
+Definition at line \mbox{\hyperlink{Command_8h_source_l00039}{39}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
 
 \mbox{\Hypertarget{classCommand_a2fa8827887b8e2d753b952f91b90c573}\label{classCommand_a2fa8827887b8e2d753b952f91b90c573}} 
 \index{Command@{Command}!ACTION\_NONE@{ACTION\_NONE}}
@@ -353,7 +365,7 @@ Definition at line \mbox{\hyperlink{Command_8h_source_l00037}{37}} of file \mbox
 
 
 
-Definition at line \mbox{\hyperlink{Command_8h_source_l00023}{23}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
+Definition at line \mbox{\hyperlink{Command_8h_source_l00024}{24}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
 
 \mbox{\Hypertarget{classCommand_a567caf569156379277f22c954fbee065}\label{classCommand_a567caf569156379277f22c954fbee065}} 
 \index{Command@{Command}!ACTION\_SET\_DEPTH\_LEVEL@{ACTION\_SET\_DEPTH\_LEVEL}}
@@ -363,7 +375,7 @@ Definition at line \mbox{\hyperlink{Command_8h_source_l00023}{23}} of file \mbox
 
 action for depth level setting 
 
-Definition at line \mbox{\hyperlink{Command_8h_source_l00032}{32}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
+Definition at line \mbox{\hyperlink{Command_8h_source_l00033}{33}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
 
 \mbox{\Hypertarget{classCommand_ad0b35b3408dd5a3eec841cdc1f9d5f15}\label{classCommand_ad0b35b3408dd5a3eec841cdc1f9d5f15}} 
 \index{Command@{Command}!ACTION\_SET\_PLAYER\_BAR\_SIZE@{ACTION\_SET\_PLAYER\_BAR\_SIZE}}
@@ -373,7 +385,7 @@ Definition at line \mbox{\hyperlink{Command_8h_source_l00032}{32}} of file \mbox
 
 action for player bar size setting 
 
-Definition at line \mbox{\hyperlink{Command_8h_source_l00033}{33}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
+Definition at line \mbox{\hyperlink{Command_8h_source_l00034}{34}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
 
 \mbox{\Hypertarget{classCommand_a4e5512e4495c67b21452622623c652d9}\label{classCommand_a4e5512e4495c67b21452622623c652d9}} 
 \index{Command@{Command}!ACTION\_SET\_SCORE@{ACTION\_SET\_SCORE}}
@@ -383,7 +395,7 @@ Definition at line \mbox{\hyperlink{Command_8h_source_l00033}{33}} of file \mbox
 
 action for score setting 
 
-Definition at line \mbox{\hyperlink{Command_8h_source_l00030}{30}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
+Definition at line \mbox{\hyperlink{Command_8h_source_l00031}{31}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
 
 \mbox{\Hypertarget{classCommand_aee33de69f704679c7f7b6a6b1c52e24d}\label{classCommand_aee33de69f704679c7f7b6a6b1c52e24d}} 
 \index{Command@{Command}!ACTION\_START\_GAME@{ACTION\_START\_GAME}}
@@ -393,7 +405,7 @@ Definition at line \mbox{\hyperlink{Command_8h_source_l00030}{30}} of file \mbox
 
 action for game start 
 
-Definition at line \mbox{\hyperlink{Command_8h_source_l00035}{35}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
+Definition at line \mbox{\hyperlink{Command_8h_source_l00037}{37}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
 
 \mbox{\Hypertarget{classCommand_a322d732c31e18d1949af06fc39a57797}\label{classCommand_a322d732c31e18d1949af06fc39a57797}} 
 \index{Command@{Command}!BLOCK\_TYPE\_COMMON@{BLOCK\_TYPE\_COMMON}}
@@ -403,7 +415,7 @@ Definition at line \mbox{\hyperlink{Command_8h_source_l00035}{35}} of file \mbox
 
 action for common block 
 
-Definition at line \mbox{\hyperlink{Command_8h_source_l00040}{40}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
+Definition at line \mbox{\hyperlink{Command_8h_source_l00042}{42}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
 
 \mbox{\Hypertarget{classCommand_a9f0c337350dc90045c6432cffbb8216c}\label{classCommand_a9f0c337350dc90045c6432cffbb8216c}} 
 \index{Command@{Command}!BLOCK\_TYPE\_DEEP@{BLOCK\_TYPE\_DEEP}}
@@ -413,7 +425,7 @@ Definition at line \mbox{\hyperlink{Command_8h_source_l00040}{40}} of file \mbox
 
 action for deep block 
 
-Definition at line \mbox{\hyperlink{Command_8h_source_l00044}{44}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
+Definition at line \mbox{\hyperlink{Command_8h_source_l00046}{46}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
 
 \mbox{\Hypertarget{classCommand_ad3315bedc7fa5a73edf3f54c1b5da7d4}\label{classCommand_ad3315bedc7fa5a73edf3f54c1b5da7d4}} 
 \index{Command@{Command}!BLOCK\_TYPE\_DOUBLE@{BLOCK\_TYPE\_DOUBLE}}
@@ -423,7 +435,7 @@ Definition at line \mbox{\hyperlink{Command_8h_source_l00044}{44}} of file \mbox
 
 action for double block 
 
-Definition at line \mbox{\hyperlink{Command_8h_source_l00041}{41}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
+Definition at line \mbox{\hyperlink{Command_8h_source_l00043}{43}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
 
 \mbox{\Hypertarget{classCommand_a3f023dfbb5d271014f2a8111ce5ca43d}\label{classCommand_a3f023dfbb5d271014f2a8111ce5ca43d}} 
 \index{Command@{Command}!BLOCK\_TYPE\_INTERNAL@{BLOCK\_TYPE\_INTERNAL}}
@@ -433,7 +445,7 @@ Definition at line \mbox{\hyperlink{Command_8h_source_l00041}{41}} of file \mbox
 
 action for internal block 
 
-Definition at line \mbox{\hyperlink{Command_8h_source_l00043}{43}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
+Definition at line \mbox{\hyperlink{Command_8h_source_l00045}{45}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
 
 \mbox{\Hypertarget{classCommand_a21d7a529d1d6316289b672a39c9137f0}\label{classCommand_a21d7a529d1d6316289b672a39c9137f0}} 
 \index{Command@{Command}!BLOCK\_TYPE\_SURPRISE@{BLOCK\_TYPE\_SURPRISE}}
@@ -443,7 +455,7 @@ Definition at line \mbox{\hyperlink{Command_8h_source_l00043}{43}} of file \mbox
 
 action for surprise block 
 
-Definition at line \mbox{\hyperlink{Command_8h_source_l00045}{45}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
+Definition at line \mbox{\hyperlink{Command_8h_source_l00047}{47}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
 
 \mbox{\Hypertarget{classCommand_a27b5cf7fb83aebffe6150e1975327e47}\label{classCommand_a27b5cf7fb83aebffe6150e1975327e47}} 
 \index{Command@{Command}!BLOCK\_TYPE\_TRIPLE@{BLOCK\_TYPE\_TRIPLE}}
@@ -453,7 +465,7 @@ Definition at line \mbox{\hyperlink{Command_8h_source_l00045}{45}} of file \mbox
 
 action for triple block 
 
-Definition at line \mbox{\hyperlink{Command_8h_source_l00042}{42}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
+Definition at line \mbox{\hyperlink{Command_8h_source_l00044}{44}} of file \mbox{\hyperlink{Command_8h_source}{Command.\+h}}.
 
 
 

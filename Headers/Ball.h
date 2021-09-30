@@ -4,6 +4,7 @@
 
 /** @brief Ball class used for displaying ball.
 
+    Displays ball igame window in given coordinates.
     @author cuadriante
     @date September 2021
     */

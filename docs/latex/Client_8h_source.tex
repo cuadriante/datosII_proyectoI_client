@@ -9,37 +9,37 @@
 \DoxyCodeLine{\Hypertarget{Client_8h_source_l00005}00005 \textcolor{preprocessor}{\#ifndef DATOSII\_PROYECTOI\_CLIENT\_CLIENT\_H}}
 \DoxyCodeLine{\Hypertarget{Client_8h_source_l00006}00006 \textcolor{preprocessor}{\#define DATOSII\_PROYECTOI\_CLIENT\_CLIENT\_H}}
 \DoxyCodeLine{\Hypertarget{Client_8h_source_l00007}00007 }
-\DoxyCodeLine{\Hypertarget{Client_8h_source_l00014}00014 \textcolor{preprocessor}{\#include <sys/socket.h>}}
-\DoxyCodeLine{\Hypertarget{Client_8h_source_l00015}00015 \textcolor{preprocessor}{\#include <sys/types.h>}}
-\DoxyCodeLine{\Hypertarget{Client_8h_source_l00016}00016 \textcolor{preprocessor}{\#include <netdb.h>} \textcolor{comment}{//librerias para red}}
-\DoxyCodeLine{\Hypertarget{Client_8h_source_l00017}00017 \textcolor{preprocessor}{\#include <string.h>}}
-\DoxyCodeLine{\Hypertarget{Client_8h_source_l00018}00018 \textcolor{preprocessor}{\#include <string>}}
-\DoxyCodeLine{\Hypertarget{Client_8h_source_l00019}00019 \textcolor{preprocessor}{\#include <iostream>}}
-\DoxyCodeLine{\Hypertarget{Client_8h_source_l00020}00020 \textcolor{preprocessor}{\#include <pthread.h>} \textcolor{comment}{// threads for multiprogramming}}
-\DoxyCodeLine{\Hypertarget{Client_8h_source_l00021}00021 \textcolor{preprocessor}{\#include <vector>} \textcolor{comment}{//para almacenar varios clientes}}
-\DoxyCodeLine{\Hypertarget{Client_8h_source_l00022}00022 \textcolor{preprocessor}{\#include <unistd.h>}}
-\DoxyCodeLine{\Hypertarget{Client_8h_source_l00023}00023 \textcolor{preprocessor}{\#include <QDebug>}}
-\DoxyCodeLine{\Hypertarget{Client_8h_source_l00024}00024 \textcolor{preprocessor}{\#include <fcntl.h>}}
-\DoxyCodeLine{\Hypertarget{Client_8h_source_l00025}00025 \textcolor{preprocessor}{\#include "{}Socket.h"{}}}
-\DoxyCodeLine{\Hypertarget{Client_8h_source_l00026}00026 }
-\DoxyCodeLine{\Hypertarget{Client_8h_source_l00027}00027 \textcolor{keyword}{using namespace }std;}
-\DoxyCodeLine{\Hypertarget{Client_8h_source_l00028}00028 }
-\DoxyCodeLine{\Hypertarget{Client_8h_source_l00029}\mbox{\hyperlink{classClient}{00029}} \textcolor{keyword}{class }\mbox{\hyperlink{classClient}{Client}}\{}
-\DoxyCodeLine{\Hypertarget{Client_8h_source_l00030}00030 }
-\DoxyCodeLine{\Hypertarget{Client_8h_source_l00031}00031 \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{Client_8h_source_l00032}00032     \textcolor{keywordtype}{int} clientSocketId; }
-\DoxyCodeLine{\Hypertarget{Client_8h_source_l00033}00033     \textcolor{keyword}{struct }sockaddr\_in clientSocketInfo; }
-\DoxyCodeLine{\Hypertarget{Client_8h_source_l00034}00034     \textcolor{keywordtype}{int} clientSocketInfoLen = \textcolor{keyword}{sizeof}(clientSocketInfo); }
-\DoxyCodeLine{\Hypertarget{Client_8h_source_l00035}00035     \textcolor{keywordtype}{int} serverSocketPort = 4050; }
-\DoxyCodeLine{\Hypertarget{Client_8h_source_l00036}00036     \mbox{\hyperlink{classSocket}{Socket}} * clientSocket; }
-\DoxyCodeLine{\Hypertarget{Client_8h_source_l00038}00038 \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{Client_8h_source_l00042}\mbox{\hyperlink{classClient_ae51af7aa6b8f591496a8f6a4a87a14bf}{00042}}     \mbox{\hyperlink{classClient_ae51af7aa6b8f591496a8f6a4a87a14bf}{Client}}();}
-\DoxyCodeLine{\Hypertarget{Client_8h_source_l00047}\mbox{\hyperlink{classClient_ad90da7d30b44bbfc23fcd6c55ee718ab}{00047}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classClient_ad90da7d30b44bbfc23fcd6c55ee718ab}{connectSocket}}();}
-\DoxyCodeLine{\Hypertarget{Client_8h_source_l00052}\mbox{\hyperlink{classClient_a20482ba5e668b40fe17c6e3587ff869e}{00052}}     \mbox{\hyperlink{classCommand}{Command}} * \mbox{\hyperlink{classClient_a20482ba5e668b40fe17c6e3587ff869e}{getNextCommand}}();}
-\DoxyCodeLine{\Hypertarget{Client_8h_source_l00057}\mbox{\hyperlink{classClient_aafabf0c390fad8ae1ea68c0e8d8218bc}{00057}}     \mbox{\hyperlink{classSocket}{Socket}} *\mbox{\hyperlink{classClient_aafabf0c390fad8ae1ea68c0e8d8218bc}{getClientSocket}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{Client_8h_source_l00058}00058 \};}
-\DoxyCodeLine{\Hypertarget{Client_8h_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{Client_8h_source_l00015}00015 \textcolor{preprocessor}{\#include <sys/socket.h>}}
+\DoxyCodeLine{\Hypertarget{Client_8h_source_l00016}00016 \textcolor{preprocessor}{\#include <sys/types.h>}}
+\DoxyCodeLine{\Hypertarget{Client_8h_source_l00017}00017 \textcolor{preprocessor}{\#include <netdb.h>} \textcolor{comment}{//librerias para red}}
+\DoxyCodeLine{\Hypertarget{Client_8h_source_l00018}00018 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{\Hypertarget{Client_8h_source_l00019}00019 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{Client_8h_source_l00020}00020 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{Client_8h_source_l00021}00021 \textcolor{preprocessor}{\#include <pthread.h>} \textcolor{comment}{// threads for multiprogramming}}
+\DoxyCodeLine{\Hypertarget{Client_8h_source_l00022}00022 \textcolor{preprocessor}{\#include <vector>} \textcolor{comment}{//para almacenar varios clientes}}
+\DoxyCodeLine{\Hypertarget{Client_8h_source_l00023}00023 \textcolor{preprocessor}{\#include <unistd.h>}}
+\DoxyCodeLine{\Hypertarget{Client_8h_source_l00024}00024 \textcolor{preprocessor}{\#include <QDebug>}}
+\DoxyCodeLine{\Hypertarget{Client_8h_source_l00025}00025 \textcolor{preprocessor}{\#include <fcntl.h>}}
+\DoxyCodeLine{\Hypertarget{Client_8h_source_l00026}00026 \textcolor{preprocessor}{\#include "{}Socket.h"{}}}
+\DoxyCodeLine{\Hypertarget{Client_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{Client_8h_source_l00028}00028 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{Client_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{Client_8h_source_l00030}\mbox{\hyperlink{classClient}{00030}} \textcolor{keyword}{class }\mbox{\hyperlink{classClient}{Client}}\{}
+\DoxyCodeLine{\Hypertarget{Client_8h_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{Client_8h_source_l00032}00032 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{Client_8h_source_l00033}00033     \textcolor{keywordtype}{int} clientSocketId; }
+\DoxyCodeLine{\Hypertarget{Client_8h_source_l00034}00034     \textcolor{keyword}{struct }sockaddr\_in clientSocketInfo; }
+\DoxyCodeLine{\Hypertarget{Client_8h_source_l00035}00035     \textcolor{keywordtype}{int} clientSocketInfoLen = \textcolor{keyword}{sizeof}(clientSocketInfo); }
+\DoxyCodeLine{\Hypertarget{Client_8h_source_l00036}00036     \textcolor{keywordtype}{int} serverSocketPort = 4050; }
+\DoxyCodeLine{\Hypertarget{Client_8h_source_l00037}00037     \mbox{\hyperlink{classSocket}{Socket}} * clientSocket; }
+\DoxyCodeLine{\Hypertarget{Client_8h_source_l00039}00039 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Client_8h_source_l00043}\mbox{\hyperlink{classClient_ae51af7aa6b8f591496a8f6a4a87a14bf}{00043}}     \mbox{\hyperlink{classClient_ae51af7aa6b8f591496a8f6a4a87a14bf}{Client}}();}
+\DoxyCodeLine{\Hypertarget{Client_8h_source_l00048}\mbox{\hyperlink{classClient_ad90da7d30b44bbfc23fcd6c55ee718ab}{00048}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classClient_ad90da7d30b44bbfc23fcd6c55ee718ab}{connectSocket}}();}
+\DoxyCodeLine{\Hypertarget{Client_8h_source_l00053}\mbox{\hyperlink{classClient_a20482ba5e668b40fe17c6e3587ff869e}{00053}}     \mbox{\hyperlink{classCommand}{Command}} * \mbox{\hyperlink{classClient_a20482ba5e668b40fe17c6e3587ff869e}{getNextCommand}}();}
+\DoxyCodeLine{\Hypertarget{Client_8h_source_l00058}\mbox{\hyperlink{classClient_aafabf0c390fad8ae1ea68c0e8d8218bc}{00058}}     \mbox{\hyperlink{classSocket}{Socket}} *\mbox{\hyperlink{classClient_aafabf0c390fad8ae1ea68c0e8d8218bc}{getClientSocket}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Client_8h_source_l00059}00059 \};}
 \DoxyCodeLine{\Hypertarget{Client_8h_source_l00060}00060 }
-\DoxyCodeLine{\Hypertarget{Client_8h_source_l00061}00061 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//DATOSII\_PROYECTOI\_CLIENT\_CLIENT\_H}}
+\DoxyCodeLine{\Hypertarget{Client_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{Client_8h_source_l00062}00062 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//DATOSII\_PROYECTOI\_CLIENT\_CLIENT\_H}}
 
 \end{DoxyCode}

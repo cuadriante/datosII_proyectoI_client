@@ -7,6 +7,7 @@
 
 /** @brief GameLoop class used for game window thread.
 
+    Creates thread for checking messages necessary for communication between server and client.
     @author cuadriante
     @date September 2021
     */
