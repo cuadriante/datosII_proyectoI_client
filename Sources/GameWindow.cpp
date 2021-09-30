@@ -54,11 +54,16 @@ void GameWindow::start() {
 void GameWindow::askForPlayerName() {
     titleLabel = new QLabel(this);
     titleLabel->setText("Crazy Breakout \n ver 0.1");
+    QFont font = titleLabel->font();
+    font.setPointSize(30);
+    font.setBold(true);
+    titleLabel->setFont(font);
     titleLabel->setAlignment(Qt::AlignCenter);
-    titleLabel->setGeometry(230, 100, 150, 100);
+    titleLabel->setGeometry(132, 100, 350, 100);
     titleLabel->setVisible(true);
 
     nameTextInput = new QLineEdit(this);
+    nameTextInput->setAlignment(Qt::AlignCenter);
     nameTextInput->setPlaceholderText("Player name");
     nameTextInput->setMaxLength(20);
     nameTextInput->setGeometry(240, 250, 120, 25);
@@ -66,7 +71,7 @@ void GameWindow::askForPlayerName() {
 
     nameInputButton = new QPushButton(this);
     nameInputButton->setGeometry(266, 290, 70, 25);
-    nameInputButton->setText("OK");
+    nameInputButton->setText("PLAY");
     nameInputButton->setVisible(true);
     //QObject::connect(nameInputButton, SIGNAL(clicked()), this, SLOT(clickedSlot()));
     connect(nameInputButton, SIGNAL(clicked()), this, SLOT(clickedSlot()));
@@ -75,22 +80,29 @@ void GameWindow::askForPlayerName() {
 void GameWindow::createLabels() {// create points pointsLabel
     pointsLabel = new QLabel(this);
     pointsLabel->setText("Points: 0");
-    pointsLabel->setAlignment(Qt::AlignBottom | Qt::AlignRight);
+    pointsLabel->setAlignment(Qt::AlignBottom | Qt::AlignLeft);
     pointsLabel->setGeometry(470, 400, 100, 100);
     pointsLabel->setVisible(true);
 
     // create depth level label
     depthLabel = new QLabel(this);
     depthLabel->setText("Depth Level: 0");
-    depthLabel->setAlignment(Qt::AlignBottom | Qt::AlignRight);
+    depthLabel->setAlignment(Qt::AlignBottom | Qt::AlignLeft);
     depthLabel->setGeometry(470, 380, 110, 100);
     depthLabel->setVisible(true);
 
     // create surprise label
     surpriseLabel = new QLabel(this);
     surpriseLabel->setText("Surprise !!");
-    surpriseLabel->setAlignment(Qt::AlignBottom | Qt::AlignRight);
+    surpriseLabel->setAlignment(Qt::AlignBottom | Qt::AlignLeft);
     surpriseLabel->setGeometry(470, 360, 100, 100);
+
+    // create player name label
+    playerLabel = new QLabel(this);
+    playerLabel->setText("Player: " + playerName);
+    playerLabel->setAlignment(Qt::AlignBottom | Qt::AlignLeft);
+    playerLabel->setGeometry(470, 420, 100, 100);
+    playerLabel->setVisible(true);
 }
 
 void GameWindow::addBlock(int id, int x, int y, int type, int hitsToBreak) {
@@ -153,8 +165,9 @@ vector<Block *> &GameWindow::getOtherPlayers() {
 }
 
 void GameWindow::clickedSlot() {
-    QString str = nameTextInput->text();
+    playerName  = nameTextInput->text();
     qDebug() << "Button pressed";
+    qDebug() << playerName;
 
     titleLabel->setVisible(false);
     nameInputButton->setVisible(false);

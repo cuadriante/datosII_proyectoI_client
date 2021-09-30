@@ -40,8 +40,10 @@ private:
     vector<Block *> otherPlayers; /**<initial PlayerList*/
     QLabel * pointsLabel; /**<initial points label*/
     QLabel * depthLabel; /**<initial depth level label*/
-    QLabel * surpriseLabel; /**<initial surprise label*/\
-    QLabel * titleLabel;
+    QLabel * surpriseLabel; /**<initial surprise label*/
+    QLabel * titleLabel; /**<initial title label*/
+    QLabel * playerLabel; /**<initial player label*/
+    QString playerName; /**<initial player name string*/
     int totalPoints = 0; /**<initial total points*/
     int depthLevel = 0; /**<initial depth level*/
     QLineEdit *nameTextInput;

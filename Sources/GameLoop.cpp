@@ -33,7 +33,6 @@ void GameLoop::loop() {
                 gameWindow->getBall()->setY(y);
                 break;
             }
-
             case Command::ACTION_MOVE_PLAYER: {
                 int x = c->getPosX();
                 int y = c->getPosY();
@@ -46,7 +45,6 @@ void GameLoop::loop() {
                 }
                 break;
             }
-
             case Command::ACTION_MOVE_OTHER_PLAYER: {
                 int x = c->getPosX();
                 int y = c->getPosY();
