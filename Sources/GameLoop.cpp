@@ -22,7 +22,8 @@ void GameLoop::loop() {
                 int id = c->getId();
                 int x = c->getPosX();
                 int y = c->getPosY();
-                gameWindow->addBlock(id, x, y, c->getType());
+                int hitsToBreak = c->getSize();
+                gameWindow->addBlock(id, x, y, c->getType(), hitsToBreak);
                 break;
             }
             case Command::ACTION_MOVE_BALL: {
@@ -32,6 +33,7 @@ void GameLoop::loop() {
                 gameWindow->getBall()->setY(y);
                 break;
             }
+
             case Command::ACTION_MOVE_PLAYER: {
                 int x = c->getPosX();
                 int y = c->getPosY();
@@ -44,6 +46,21 @@ void GameLoop::loop() {
                 }
                 break;
             }
+
+            case Command::ACTION_MOVE_OTHER_PLAYER: {
+                int x = c->getPosX();
+                int y = c->getPosY();
+                int size = c->getSize();
+                int id = c->getId();
+                while (id >= gameWindow->getOtherPlayers().size()){
+                    Block * otherPlayerBar = new Block();
+                    gameWindow->getOtherPlayers().push_back(otherPlayerBar);
+                    gameWindow->scene->addItem(otherPlayerBar);
+                }
+                Block * otherPlayer = gameWindow->getOtherPlayers().at(id);
+                otherPlayer->setRect(x, y, size, 15);
+                break;
+            }
             case Command::ACTION_DELETE_BLOCK:{
                 int id = c->getId();
                 Block * block = gameWindow->getBlocklist().at(id);
@@ -54,6 +71,9 @@ void GameLoop::loop() {
                 break;
             }
             case Command::ACTION_SET_SCORE: {
+                if (gameWindow->getSurpriseLabel()->isVisible()){
+                    gameWindow->getSurpriseLabel()->setVisible(false);
+                }
                 int score = c->getSize();
                 gameWindow->setScoreLabel(score);
                 break;

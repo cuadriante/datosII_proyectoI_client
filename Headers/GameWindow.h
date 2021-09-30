@@ -36,11 +36,16 @@ private:
     Ball * ball; /**<initial ball*/
     vector<Block *> blocklist; /**<initial blockList*/
     PlayerBar * playerBar; /**<initial player bar*/
+    vector<Block *> otherPlayers; /**<initial PlayerList*/
     QLabel * pointsLabel; /**<initial points label*/
     QLabel * depthLabel; /**<initial depth level label*/
-    QLabel * surpriseLabel; /**<initial surprise label*/
+    QLabel * surpriseLabel; /**<initial surprise label*/\
+    QLabel * titleLabel;
     int totalPoints = 0; /**<initial total points*/
     int depthLevel = 0; /**<initial depth level*/
+    QLineEdit *nameTextInput;
+    QPushButton *nameInputButton;
+
 
 public:
     QGraphicsScene * scene; /**Graphic scene*/
@@ -56,7 +61,7 @@ public:
      * @param y
      * @param type
      */
-    void addBlock(int id, int x, int y, int type);
+    void addBlock(int id, int x, int y, int type, int hitsToBreak);
     /** Initializes game.
      *
      */
@@ -109,6 +114,11 @@ public:
      *
      */
     void createLabels();
+
+    vector<Block *> &getOtherPlayers();
+
+private slots:
+    void clickedSlot(bool clicked);
 };
 
 #endif //DATOSII_PROYECTOI_CLIENT_GAMEWINDOW_H

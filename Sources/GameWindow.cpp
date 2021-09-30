@@ -18,6 +18,32 @@ GameWindow::GameWindow(QWidget *parent) : QGraphicsView(parent) {
 }
 
 void GameWindow::start() {
+    // create text line edit for name input
+//    QDialog * nameDialog = new QDialog(this);
+//    nameDialog->setVisible(true);
+//    nameDialog->setModal(true);
+
+    titleLabel = new QLabel(this);
+    titleLabel->setText("Crazy Breakout \n ver 0.1");
+    titleLabel->setAlignment(Qt::AlignCenter);
+    titleLabel->setGeometry(230, 100, 150, 100);
+    titleLabel->setVisible(true);
+
+    nameTextInput = new QLineEdit(this);
+    nameTextInput->setPlaceholderText("Player name");
+    nameTextInput->setMaxLength(20);
+    nameTextInput->setGeometry(240, 250, 120, 25);
+    nameTextInput->setVisible(true);
+
+    nameInputButton = new QPushButton(this);
+    nameInputButton->setGeometry(266, 290, 70, 25);
+    nameInputButton->setText("OK");
+    nameInputButton->setVisible(true);
+    //QObject::connect(nameInputButton, SIGNAL(clicked()), this, SLOT(clickedSlot()));
+    connect(nameInputButton, SIGNAL(clicked(bool)), this, SLOT(clickedSlot(bool)));
+
+    //QString str = nameTextInput->text();
+
     //create player bar
     playerBar = new PlayerBar();
     playerBar->setPos(700,700);
@@ -30,11 +56,12 @@ void GameWindow::start() {
     ball->setPos(0, 700);
     scene->addItem(ball);
 
+    createLabels();
 
 
     Client* client = new Client();
     if (client->connectSocket()) {
-        createLabels();
+
         GameLoop * gameLoop = new GameLoop();
         scene->addItem(gameLoop);
         playerBar->setClientSocket(client->getClientSocket());
@@ -66,13 +93,16 @@ void GameWindow::createLabels() {// create points pointsLabel
     surpriseLabel->setGeometry(470, 360, 100, 100);
 }
 
-void GameWindow::addBlock(int id, int x, int y, int type) {
+void GameWindow::addBlock(int id, int x, int y, int type, int hitsToBreak) {
     Block * block = new Block();
     block->setId(id);
     block->setType(type);
     block->setPos(x,y);
     blocklist.push_back(block);
     scene->addItem(block);
+    if (hitsToBreak <= 0){
+        block->setVisible(false);
+    }
 }
 
 Ball *GameWindow::getBall() const {
@@ -117,3 +147,15 @@ void GameWindow::setSurpriseLabel(){
 QLabel *GameWindow::getSurpriseLabel() const {
     return surpriseLabel;
 }
+
+vector<Block *> &GameWindow::getOtherPlayers() {
+    return otherPlayers;
+}
+
+void GameWindow::clickedSlot(bool clicked) {
+    if (clicked) {
+        qDebug() << "m";
+    }
+
+}
+
