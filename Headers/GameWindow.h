@@ -1,16 +1,14 @@
 //
 // Created by cuadriante on 6/9/21.
 //
-
-#ifndef DATOSII_PROYECTOI_CLIENT_GAMEWINDOW_H
-#define DATOSII_PROYECTOI_CLIENT_GAMEWINDOW_H
-
 /** @brief GameWindow class used for displaying displaying game.
 
     Creates game window elements and displays them.
     @author cuadriante
     @date September 2021
     */
+#ifndef DATOSII_PROYECTOI_CLIENT_GAMEWINDOW_H
+#define DATOSII_PROYECTOI_CLIENT_GAMEWINDOW_H
 
 #include <QGraphicsView>
 #include <QGraphicsScene>
@@ -118,18 +116,32 @@ public:
      * @return
      */
     QLabel *getSurpriseLabel() const;
-    /** Creates initial labels.
+    /** Creates initial QLabels.
      *
      */
     void createLabels();
-
+    /** Returns vector with all players except current.
+     *
+     * @return
+     */
     vector<Block *> &getOtherPlayers();
-
+/** Retrieves player name from  QLineEdit
+ *
+ */
     void askForPlayerName();
+    /** Ends all games by disaspearing all items in window.
+     *
+     */
     void endGame();
-
+    /**Sets game winning stage.
+     *
+     * @return
+     */
     bool isWon() const;
-
+    /**Sets game winning stage.
+     *
+     * @return
+     */
     void setWon(bool won);
 
 private slots:

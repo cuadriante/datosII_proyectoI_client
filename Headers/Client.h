@@ -1,16 +1,16 @@
 //
 // Created by cuadriante on 19/9/21.
 //
-
-#ifndef DATOSII_PROYECTOI_CLIENT_CLIENT_H
-#define DATOSII_PROYECTOI_CLIENT_CLIENT_H
-
 /** @brief Client class used for communication with server.
 
     Connects to server and sends and receives commands.
     @author cuadriante
     @date September 2021
     */
+
+#ifndef DATOSII_PROYECTOI_CLIENT_CLIENT_H
+#define DATOSII_PROYECTOI_CLIENT_CLIENT_H
+
 
 #include <sys/socket.h>
 #include <sys/types.h>

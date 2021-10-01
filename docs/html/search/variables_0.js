@@ -13,5 +13,6 @@ var searchData=
   ['action_5fset_5fdepth_5flevel_10',['ACTION_SET_DEPTH_LEVEL',['../classCommand.html#a567caf569156379277f22c954fbee065',1,'Command']]],
   ['action_5fset_5fplayer_5fbar_5fsize_11',['ACTION_SET_PLAYER_BAR_SIZE',['../classCommand.html#ad0b35b3408dd5a3eec841cdc1f9d5f15',1,'Command']]],
   ['action_5fset_5fscore_12',['ACTION_SET_SCORE',['../classCommand.html#a4e5512e4495c67b21452622623c652d9',1,'Command']]],
-  ['action_5fstart_5fgame_13',['ACTION_START_GAME',['../classCommand.html#aee33de69f704679c7f7b6a6b1c52e24d',1,'Command']]]
+  ['action_5fstart_5fgame_13',['ACTION_START_GAME',['../classCommand.html#aee33de69f704679c7f7b6a6b1c52e24d',1,'Command']]],
+  ['action_5fwin_5fgame_14',['ACTION_WIN_GAME',['../classCommand.html#a6b8275cb6357106f46de5ed9a64f0fb4',1,'Command']]]
 ];

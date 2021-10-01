@@ -35,11 +35,15 @@ QLabel $\ast$ \mbox{\hyperlink{classGameWindow_a0a405ff0d040b273587292210e706b5f
 \item 
 void \mbox{\hyperlink{classGameWindow_a30f9a105a0dabbb5c28c7f82632dec2c}{create\+Labels}} ()
 \item 
-\mbox{\Hypertarget{classGameWindow_a0ee870824cd5d5585d5d1dab61d273a9}\label{classGameWindow_a0ee870824cd5d5585d5d1dab61d273a9}} 
-vector$<$ \mbox{\hyperlink{classBlock}{Block}} $\ast$ $>$ \& {\bfseries get\+Other\+Players} ()
+vector$<$ \mbox{\hyperlink{classBlock}{Block}} $\ast$ $>$ \& \mbox{\hyperlink{classGameWindow_a0ee870824cd5d5585d5d1dab61d273a9}{get\+Other\+Players}} ()
 \item 
-\mbox{\Hypertarget{classGameWindow_a884517088d4091302e2c235cf31dbb6a}\label{classGameWindow_a884517088d4091302e2c235cf31dbb6a}} 
-void {\bfseries ask\+For\+Player\+Name} ()
+void \mbox{\hyperlink{classGameWindow_a884517088d4091302e2c235cf31dbb6a}{ask\+For\+Player\+Name}} ()
+\item 
+void \mbox{\hyperlink{classGameWindow_a569cedbfda5f467d554aeacd6b93648b}{end\+Game}} ()
+\item 
+bool \mbox{\hyperlink{classGameWindow_abb28feb557c00ef07f4082c3067c44b1}{is\+Won}} () const
+\item 
+void \mbox{\hyperlink{classGameWindow_a9251cfb7aa4a75e95a835393d1f54cc5}{set\+Won}} (bool won)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -51,7 +55,7 @@ QGraphics\+Scene $\ast$ \mbox{\hyperlink{classGameWindow_a30e66f8824cf672da87f29
 \doxysubsection{Detailed Description}
 
 
-Definition at line \mbox{\hyperlink{GameWindow_8h_source_l00035}{35}} of file \mbox{\hyperlink{GameWindow_8h_source}{Game\+Window.\+h}}.
+Definition at line \mbox{\hyperlink{GameWindow_8h_source_l00033}{33}} of file \mbox{\hyperlink{GameWindow_8h_source}{Game\+Window.\+h}}.
 
 
 
@@ -91,13 +95,25 @@ Adds block to game window.
 {\em type} & \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classGameWindow_a30f9a105a0dabbb5c28c7f82632dec2c}\label{classGameWindow_a30f9a105a0dabbb5c28c7f82632dec2c}} 
+\mbox{\Hypertarget{classGameWindow_a884517088d4091302e2c235cf31dbb6a}\label{classGameWindow_a884517088d4091302e2c235cf31dbb6a}} 
+\index{GameWindow@{GameWindow}!askForPlayerName@{askForPlayerName}}
+\index{askForPlayerName@{askForPlayerName}!GameWindow@{GameWindow}}
+\doxysubsubsection{\texorpdfstring{askForPlayerName()}{askForPlayerName()}}
+{\footnotesize\ttfamily void Game\+Window\+::ask\+For\+Player\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves player name from QLine\+Edit \mbox{\Hypertarget{classGameWindow_a30f9a105a0dabbb5c28c7f82632dec2c}\label{classGameWindow_a30f9a105a0dabbb5c28c7f82632dec2c}} 
 \index{GameWindow@{GameWindow}!createLabels@{createLabels}}
 \index{createLabels@{createLabels}!GameWindow@{GameWindow}}
 \doxysubsubsection{\texorpdfstring{createLabels()}{createLabels()}}
 {\footnotesize\ttfamily void Game\+Window\+::create\+Labels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Creates initial labels. \mbox{\Hypertarget{classGameWindow_abdb3a3a69306d6a032cae822b30f4a29}\label{classGameWindow_abdb3a3a69306d6a032cae822b30f4a29}} 
+Creates initial QLabels. \mbox{\Hypertarget{classGameWindow_a569cedbfda5f467d554aeacd6b93648b}\label{classGameWindow_a569cedbfda5f467d554aeacd6b93648b}} 
+\index{GameWindow@{GameWindow}!endGame@{endGame}}
+\index{endGame@{endGame}!GameWindow@{GameWindow}}
+\doxysubsubsection{\texorpdfstring{endGame()}{endGame()}}
+{\footnotesize\ttfamily void Game\+Window\+::end\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Ends all games by disaspearing all items in window. \mbox{\Hypertarget{classGameWindow_abdb3a3a69306d6a032cae822b30f4a29}\label{classGameWindow_abdb3a3a69306d6a032cae822b30f4a29}} 
 \index{GameWindow@{GameWindow}!getBall@{getBall}}
 \index{getBall@{getBall}!GameWindow@{GameWindow}}
 \doxysubsubsection{\texorpdfstring{getBall()}{getBall()}}
@@ -115,6 +131,17 @@ Returns ball.
 {\footnotesize\ttfamily const vector$<$ \mbox{\hyperlink{classBlock}{Block}} $\ast$ $>$ \& Game\+Window\+::get\+Blocklist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 Returns list of blocks in game.
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameWindow_a0ee870824cd5d5585d5d1dab61d273a9}\label{classGameWindow_a0ee870824cd5d5585d5d1dab61d273a9}} 
+\index{GameWindow@{GameWindow}!getOtherPlayers@{getOtherPlayers}}
+\index{getOtherPlayers@{getOtherPlayers}!GameWindow@{GameWindow}}
+\doxysubsubsection{\texorpdfstring{getOtherPlayers()}{getOtherPlayers()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classBlock}{Block}} $\ast$ $>$ \& Game\+Window\+::get\+Other\+Players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns vector with all players except current.
 
 \begin{DoxyReturn}{Returns}
 
@@ -137,6 +164,17 @@ Returns rect item to be moved by player.
 {\footnotesize\ttfamily QLabel $\ast$ Game\+Window\+::get\+Surprise\+Label (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 Returns surprise label.
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameWindow_abb28feb557c00ef07f4082c3067c44b1}\label{classGameWindow_abb28feb557c00ef07f4082c3067c44b1}} 
+\index{GameWindow@{GameWindow}!isWon@{isWon}}
+\index{isWon@{isWon}!GameWindow@{GameWindow}}
+\doxysubsubsection{\texorpdfstring{isWon()}{isWon()}}
+{\footnotesize\ttfamily bool Game\+Window\+::is\+Won (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Sets game winning stage.
 
 \begin{DoxyReturn}{Returns}
 
@@ -199,7 +237,18 @@ Sets score label, displays current points gained.
 \doxysubsubsection{\texorpdfstring{setSurpriseLabel()}{setSurpriseLabel()}}
 {\footnotesize\ttfamily void Game\+Window\+::set\+Surprise\+Label (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Sets surprise label when surprise block is destroyed. \mbox{\Hypertarget{classGameWindow_a43b1f9fd920d6ceb7284f1f15c5e4958}\label{classGameWindow_a43b1f9fd920d6ceb7284f1f15c5e4958}} 
+Sets surprise label when surprise block is destroyed. \mbox{\Hypertarget{classGameWindow_a9251cfb7aa4a75e95a835393d1f54cc5}\label{classGameWindow_a9251cfb7aa4a75e95a835393d1f54cc5}} 
+\index{GameWindow@{GameWindow}!setWon@{setWon}}
+\index{setWon@{setWon}!GameWindow@{GameWindow}}
+\doxysubsubsection{\texorpdfstring{setWon()}{setWon()}}
+{\footnotesize\ttfamily void Game\+Window\+::set\+Won (\begin{DoxyParamCaption}\item[{bool}]{won }\end{DoxyParamCaption})}
+
+Sets game winning stage.
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGameWindow_a43b1f9fd920d6ceb7284f1f15c5e4958}\label{classGameWindow_a43b1f9fd920d6ceb7284f1f15c5e4958}} 
 \index{GameWindow@{GameWindow}!start@{start}}
 \index{start@{start}!GameWindow@{GameWindow}}
 \doxysubsubsection{\texorpdfstring{start()}{start()}}
@@ -216,7 +265,7 @@ Initializes game.
 
 
 
-Definition at line \mbox{\hyperlink{GameWindow_8h_source_l00055}{55}} of file \mbox{\hyperlink{GameWindow_8h_source}{Game\+Window.\+h}}.
+Definition at line \mbox{\hyperlink{GameWindow_8h_source_l00057}{57}} of file \mbox{\hyperlink{GameWindow_8h_source}{Game\+Window.\+h}}.
 
 
 

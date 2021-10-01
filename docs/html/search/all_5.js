@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['playerbar_0',['PlayerBar',['../classPlayerBar.html',1,'PlayerBar'],['../classPlayerBar.html#ab766b19505d03fa08a6872fb57ad8a56',1,'PlayerBar::PlayerBar()']]]
+  ['iswon_0',['isWon',['../classGameWindow.html#abb28feb557c00ef07f4082c3067c44b1',1,'GameWindow']]]
 ];

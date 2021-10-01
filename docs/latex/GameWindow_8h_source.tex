@@ -5,75 +5,79 @@
 \DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00001}00001 \textcolor{comment}{//}}
 \DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00002}00002 \textcolor{comment}{// Created by cuadriante on 6/9/21.}}
 \DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00003}00003 \textcolor{comment}{//}}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00004}00004 }
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00005}00005 \textcolor{preprocessor}{\#ifndef DATOSII\_PROYECTOI\_CLIENT\_GAMEWINDOW\_H}}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00006}00006 \textcolor{preprocessor}{\#define DATOSII\_PROYECTOI\_CLIENT\_GAMEWINDOW\_H}}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00007}00007 }
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00015}00015 \textcolor{preprocessor}{\#include <QGraphicsView>}}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00016}00016 \textcolor{preprocessor}{\#include <QGraphicsScene>}}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00017}00017 \textcolor{preprocessor}{\#include <QtWidgets>}}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00018}00018 \textcolor{preprocessor}{\#include <QGraphicsItem>}}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00019}00019 \textcolor{preprocessor}{\#include <QGraphicsRectItem>}}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00020}00020 \textcolor{preprocessor}{\#include <QTimer>}}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00021}00021 \textcolor{preprocessor}{\#include <QBrush>}}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00022}00022 \textcolor{preprocessor}{\#include <QDebug>}}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00023}00023 \textcolor{preprocessor}{\#include <QKeyEvent>}}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00024}00024 \textcolor{preprocessor}{\#include <QApplication>}}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00025}00025 \textcolor{preprocessor}{\#include <unistd.h>}}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00026}00026 }
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00027}00027 \textcolor{preprocessor}{\#include "{}Client.h"{}}}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00028}00028 \textcolor{preprocessor}{\#include "{}../Headers/PlayerBar.h"{}}}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00029}00029 \textcolor{preprocessor}{\#include "{}../Headers/Block.h"{}}}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00030}00030 \textcolor{preprocessor}{\#include "{}../Headers/GameLoop.h"{}}}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00031}00031 \textcolor{preprocessor}{\#include "{}../Headers/Ball.h"{}}}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00010}00010 \textcolor{comment}{}\textcolor{preprocessor}{\#ifndef DATOSII\_PROYECTOI\_CLIENT\_GAMEWINDOW\_H}}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00011}00011 \textcolor{preprocessor}{\#define DATOSII\_PROYECTOI\_CLIENT\_GAMEWINDOW\_H}}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00013}00013 \textcolor{preprocessor}{\#include <QGraphicsView>}}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00014}00014 \textcolor{preprocessor}{\#include <QGraphicsScene>}}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00015}00015 \textcolor{preprocessor}{\#include <QtWidgets>}}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00016}00016 \textcolor{preprocessor}{\#include <QGraphicsItem>}}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00017}00017 \textcolor{preprocessor}{\#include <QGraphicsRectItem>}}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00018}00018 \textcolor{preprocessor}{\#include <QTimer>}}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00019}00019 \textcolor{preprocessor}{\#include <QBrush>}}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00020}00020 \textcolor{preprocessor}{\#include <QDebug>}}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00021}00021 \textcolor{preprocessor}{\#include <QKeyEvent>}}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00022}00022 \textcolor{preprocessor}{\#include <QApplication>}}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00023}00023 \textcolor{preprocessor}{\#include <unistd.h>}}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00025}00025 \textcolor{preprocessor}{\#include "{}Client.h"{}}}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00026}00026 \textcolor{preprocessor}{\#include "{}../Headers/PlayerBar.h"{}}}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00027}00027 \textcolor{preprocessor}{\#include "{}../Headers/Block.h"{}}}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00028}00028 \textcolor{preprocessor}{\#include "{}../Headers/GameLoop.h"{}}}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00029}00029 \textcolor{preprocessor}{\#include "{}../Headers/Ball.h"{}}}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00031}00031 \textcolor{keyword}{using namespace }std;}
 \DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00032}00032 }
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00033}00033 \textcolor{keyword}{using namespace }std;}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00034}00034 }
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00035}\mbox{\hyperlink{classGameWindow}{00035}} \textcolor{keyword}{class }\mbox{\hyperlink{classGameWindow}{GameWindow}}: \textcolor{keyword}{public} QGraphicsView \{}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00036}00036     Q\_OBJECT}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00037}00037 \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00038}00038     \mbox{\hyperlink{classBall}{Ball}} * ball; }
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00039}00039     vector<Block *> blocklist; }
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00040}00040     \mbox{\hyperlink{classPlayerBar}{PlayerBar}} * playerBar; }
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00041}00041     vector<Block *> otherPlayers; }
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00042}00042     QLabel * pointsLabel; }
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00043}00043     QLabel * depthLabel; }
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00044}00044     QLabel * surpriseLabel; }
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00045}00045     QLabel * titleLabel; }
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00046}00046     QLabel * playerLabel; }
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00047}00047     QString playerName; }
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00048}00048     \textcolor{keywordtype}{int} totalPoints = 0; }
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00049}00049     \textcolor{keywordtype}{int} depthLevel = 0; }
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00050}00050     QLineEdit *nameTextInput;}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00051}00051     QPushButton *nameInputButton;}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00052}00052 }
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00053}00053 }
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00054}00054 \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00055}00055     QGraphicsScene * scene; }
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00060}\mbox{\hyperlink{classGameWindow_a866f35fe19d2f1a3c35fcc234c6e195d}{00060}}     \mbox{\hyperlink{classGameWindow_a866f35fe19d2f1a3c35fcc234c6e195d}{GameWindow}}(QWidget* parent=NULL);}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00068}\mbox{\hyperlink{classGameWindow_af85a0a69702dbb25afe22e8e59d7b2c6}{00068}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameWindow_af85a0a69702dbb25afe22e8e59d7b2c6}{addBlock}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}, \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{int} type, \textcolor{keywordtype}{int} hitsToBreak);}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00072}\mbox{\hyperlink{classGameWindow_a43b1f9fd920d6ceb7284f1f15c5e4958}{00072}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameWindow_a43b1f9fd920d6ceb7284f1f15c5e4958}{start}}();}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00077}\mbox{\hyperlink{classGameWindow_abdb3a3a69306d6a032cae822b30f4a29}{00077}}     \mbox{\hyperlink{classBall}{Ball}} *\mbox{\hyperlink{classGameWindow_abdb3a3a69306d6a032cae822b30f4a29}{getBall}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00082}\mbox{\hyperlink{classGameWindow_aadfd0ea44f9af21e8b8094c5f9b8b882}{00082}}     \textcolor{keyword}{const} vector<Block *> \&\mbox{\hyperlink{classGameWindow_aadfd0ea44f9af21e8b8094c5f9b8b882}{getBlocklist}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00087}\mbox{\hyperlink{classGameWindow_ab53492cb1855514073f33bf2890e8348}{00087}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameWindow_ab53492cb1855514073f33bf2890e8348}{setBlocklist}}(\textcolor{keyword}{const} vector<Block *> \&blocklist);}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00092}\mbox{\hyperlink{classGameWindow_afd24d4ce4380954bb4c913aa6859440d}{00092}}     \mbox{\hyperlink{classPlayerBar}{PlayerBar}} *\mbox{\hyperlink{classGameWindow_afd24d4ce4380954bb4c913aa6859440d}{getPlayerBar}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00097}\mbox{\hyperlink{classGameWindow_acf51e423cd681b35393132327ace74c8}{00097}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameWindow_acf51e423cd681b35393132327ace74c8}{setPlayerBar}}(\mbox{\hyperlink{classPlayerBar}{PlayerBar}} *playerBar);}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00102}\mbox{\hyperlink{classGameWindow_aa1a97300984ce35829db2f27ac7cadf1}{00102}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameWindow_aa1a97300984ce35829db2f27ac7cadf1}{setScoreLabel}}(\textcolor{keywordtype}{int} score);}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00107}\mbox{\hyperlink{classGameWindow_ad6b551505a54b85c3fd6fff7c46e2cab}{00107}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameWindow_ad6b551505a54b85c3fd6fff7c46e2cab}{setDepthLabel}}(\textcolor{keywordtype}{int} depthLevel);}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00111}\mbox{\hyperlink{classGameWindow_a00e0f4b09490a608f71161c57322eaba}{00111}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameWindow_a00e0f4b09490a608f71161c57322eaba}{setSurpriseLabel}}();}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00116}\mbox{\hyperlink{classGameWindow_a0a405ff0d040b273587292210e706b5f}{00116}}     QLabel *\mbox{\hyperlink{classGameWindow_a0a405ff0d040b273587292210e706b5f}{getSurpriseLabel}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00120}\mbox{\hyperlink{classGameWindow_a30f9a105a0dabbb5c28c7f82632dec2c}{00120}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameWindow_a30f9a105a0dabbb5c28c7f82632dec2c}{createLabels}}();}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00121}00121 }
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00122}00122     vector<Block *> \&getOtherPlayers();}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00123}00123 }
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00124}00124     \textcolor{keywordtype}{void} askForPlayerName();}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00125}00125 }
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00126}00126 \textcolor{keyword}{private} slots:}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00127}00127     \textcolor{keywordtype}{void} clickedSlot();}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00128}00128 }
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00129}00129 }
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00130}00130 \};}
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00131}00131 }
-\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00132}00132 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//DATOSII\_PROYECTOI\_CLIENT\_GAMEWINDOW\_H}}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00033}\mbox{\hyperlink{classGameWindow}{00033}} \textcolor{keyword}{class }\mbox{\hyperlink{classGameWindow}{GameWindow}}: \textcolor{keyword}{public} QGraphicsView \{}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00034}00034     Q\_OBJECT}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00038}00038 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00039}00039     \mbox{\hyperlink{classBall}{Ball}} * ball; }
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00040}00040     vector<Block *> blocklist; }
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00041}00041     \mbox{\hyperlink{classPlayerBar}{PlayerBar}} * playerBar; }
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00042}00042     vector<Block *> otherPlayers; }
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00043}00043     QLabel * pointsLabel; }
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00044}00044     QLabel * depthLabel; }
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00045}00045     QLabel * surpriseLabel; }
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00046}00046     QLabel * titleLabel; }
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00047}00047     QLabel * playerLabel; }
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00048}00048     QString playerName; }
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00049}00049     \textcolor{keywordtype}{int} totalPoints = 0; }
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00050}00050     \textcolor{keywordtype}{int} depthLevel = 0; }
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00051}00051     QLineEdit *nameTextInput;}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00052}00052     QPushButton *nameInputButton;}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00053}00053     \textcolor{keywordtype}{bool} won = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00056}00056 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00057}00057     QGraphicsScene * scene; }
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00062}\mbox{\hyperlink{classGameWindow_a866f35fe19d2f1a3c35fcc234c6e195d}{00062}}     \mbox{\hyperlink{classGameWindow_a866f35fe19d2f1a3c35fcc234c6e195d}{GameWindow}}(QWidget* parent=NULL);}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00070}\mbox{\hyperlink{classGameWindow_af85a0a69702dbb25afe22e8e59d7b2c6}{00070}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameWindow_af85a0a69702dbb25afe22e8e59d7b2c6}{addBlock}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}, \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{int} type, \textcolor{keywordtype}{int} hitsToBreak);}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00074}\mbox{\hyperlink{classGameWindow_a43b1f9fd920d6ceb7284f1f15c5e4958}{00074}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameWindow_a43b1f9fd920d6ceb7284f1f15c5e4958}{start}}();}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00079}\mbox{\hyperlink{classGameWindow_abdb3a3a69306d6a032cae822b30f4a29}{00079}}     \mbox{\hyperlink{classBall}{Ball}} *\mbox{\hyperlink{classGameWindow_abdb3a3a69306d6a032cae822b30f4a29}{getBall}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00084}\mbox{\hyperlink{classGameWindow_aadfd0ea44f9af21e8b8094c5f9b8b882}{00084}}     \textcolor{keyword}{const} vector<Block *> \&\mbox{\hyperlink{classGameWindow_aadfd0ea44f9af21e8b8094c5f9b8b882}{getBlocklist}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00089}\mbox{\hyperlink{classGameWindow_ab53492cb1855514073f33bf2890e8348}{00089}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameWindow_ab53492cb1855514073f33bf2890e8348}{setBlocklist}}(\textcolor{keyword}{const} vector<Block *> \&blocklist);}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00094}\mbox{\hyperlink{classGameWindow_afd24d4ce4380954bb4c913aa6859440d}{00094}}     \mbox{\hyperlink{classPlayerBar}{PlayerBar}} *\mbox{\hyperlink{classGameWindow_afd24d4ce4380954bb4c913aa6859440d}{getPlayerBar}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00099}\mbox{\hyperlink{classGameWindow_acf51e423cd681b35393132327ace74c8}{00099}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameWindow_acf51e423cd681b35393132327ace74c8}{setPlayerBar}}(\mbox{\hyperlink{classPlayerBar}{PlayerBar}} *playerBar);}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00104}\mbox{\hyperlink{classGameWindow_aa1a97300984ce35829db2f27ac7cadf1}{00104}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameWindow_aa1a97300984ce35829db2f27ac7cadf1}{setScoreLabel}}(\textcolor{keywordtype}{int} score);}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00109}\mbox{\hyperlink{classGameWindow_ad6b551505a54b85c3fd6fff7c46e2cab}{00109}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameWindow_ad6b551505a54b85c3fd6fff7c46e2cab}{setDepthLabel}}(\textcolor{keywordtype}{int} depthLevel);}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00113}\mbox{\hyperlink{classGameWindow_a00e0f4b09490a608f71161c57322eaba}{00113}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameWindow_a00e0f4b09490a608f71161c57322eaba}{setSurpriseLabel}}();}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00118}\mbox{\hyperlink{classGameWindow_a0a405ff0d040b273587292210e706b5f}{00118}}     QLabel *\mbox{\hyperlink{classGameWindow_a0a405ff0d040b273587292210e706b5f}{getSurpriseLabel}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00122}\mbox{\hyperlink{classGameWindow_a30f9a105a0dabbb5c28c7f82632dec2c}{00122}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameWindow_a30f9a105a0dabbb5c28c7f82632dec2c}{createLabels}}();}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00127}\mbox{\hyperlink{classGameWindow_a0ee870824cd5d5585d5d1dab61d273a9}{00127}}     vector<Block *> \&\mbox{\hyperlink{classGameWindow_a0ee870824cd5d5585d5d1dab61d273a9}{getOtherPlayers}}();}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00131}\mbox{\hyperlink{classGameWindow_a884517088d4091302e2c235cf31dbb6a}{00131}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameWindow_a884517088d4091302e2c235cf31dbb6a}{askForPlayerName}}();}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00135}\mbox{\hyperlink{classGameWindow_a569cedbfda5f467d554aeacd6b93648b}{00135}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameWindow_a569cedbfda5f467d554aeacd6b93648b}{endGame}}();}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00140}\mbox{\hyperlink{classGameWindow_abb28feb557c00ef07f4082c3067c44b1}{00140}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classGameWindow_abb28feb557c00ef07f4082c3067c44b1}{isWon}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00145}\mbox{\hyperlink{classGameWindow_a9251cfb7aa4a75e95a835393d1f54cc5}{00145}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGameWindow_a9251cfb7aa4a75e95a835393d1f54cc5}{setWon}}(\textcolor{keywordtype}{bool} won);}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00146}00146 }
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00147}00147 \textcolor{keyword}{private} slots:}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00148}00148     \textcolor{keywordtype}{void} clickedSlot();}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00149}00149 }
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00150}00150 }
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00151}00151 \};}
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00152}00152 }
+\DoxyCodeLine{\Hypertarget{GameWindow_8h_source_l00153}00153 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//DATOSII\_PROYECTOI\_CLIENT\_GAMEWINDOW\_H}}
 
 \end{DoxyCode}

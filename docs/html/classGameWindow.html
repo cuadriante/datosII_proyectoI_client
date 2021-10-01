@@ -104,12 +104,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0a405ff0d040b273587292210e706b5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30f9a105a0dabbb5c28c7f82632dec2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameWindow.html#a30f9a105a0dabbb5c28c7f82632dec2c">createLabels</a> ()</td></tr>
 <tr class="separator:a30f9a105a0dabbb5c28c7f82632dec2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ee870824cd5d5585d5d1dab61d273a9"><td class="memItemLeft" align="right" valign="top"><a id="a0ee870824cd5d5585d5d1dab61d273a9" name="a0ee870824cd5d5585d5d1dab61d273a9"></a>
-vector&lt; <a class="el" href="classBlock.html">Block</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getOtherPlayers</b> ()</td></tr>
+<tr class="memitem:a0ee870824cd5d5585d5d1dab61d273a9"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="classBlock.html">Block</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameWindow.html#a0ee870824cd5d5585d5d1dab61d273a9">getOtherPlayers</a> ()</td></tr>
 <tr class="separator:a0ee870824cd5d5585d5d1dab61d273a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a884517088d4091302e2c235cf31dbb6a"><td class="memItemLeft" align="right" valign="top"><a id="a884517088d4091302e2c235cf31dbb6a" name="a884517088d4091302e2c235cf31dbb6a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>askForPlayerName</b> ()</td></tr>
+<tr class="memitem:a884517088d4091302e2c235cf31dbb6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameWindow.html#a884517088d4091302e2c235cf31dbb6a">askForPlayerName</a> ()</td></tr>
 <tr class="separator:a884517088d4091302e2c235cf31dbb6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a569cedbfda5f467d554aeacd6b93648b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameWindow.html#a569cedbfda5f467d554aeacd6b93648b">endGame</a> ()</td></tr>
+<tr class="separator:a569cedbfda5f467d554aeacd6b93648b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb28feb557c00ef07f4082c3067c44b1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameWindow.html#abb28feb557c00ef07f4082c3067c44b1">isWon</a> () const</td></tr>
+<tr class="separator:abb28feb557c00ef07f4082c3067c44b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9251cfb7aa4a75e95a835393d1f54cc5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameWindow.html#a9251cfb7aa4a75e95a835393d1f54cc5">setWon</a> (bool won)</td></tr>
+<tr class="separator:a9251cfb7aa4a75e95a835393d1f54cc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -118,7 +122,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="GameWindow_8h_source.html#l00035">35</a> of file <a class="el" href="GameWindow_8h_source.html">GameWindow.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GameWindow_8h_source.html#l00033">33</a> of file <a class="el" href="GameWindow_8h_source.html">GameWindow.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a866f35fe19d2f1a3c35fcc234c6e195d" name="a866f35fe19d2f1a3c35fcc234c6e195d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a866f35fe19d2f1a3c35fcc234c6e195d">&#9670;&nbsp;</a></span>GameWindow()</h2>
@@ -202,6 +206,24 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a884517088d4091302e2c235cf31dbb6a" name="a884517088d4091302e2c235cf31dbb6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a884517088d4091302e2c235cf31dbb6a">&#9670;&nbsp;</a></span>askForPlayerName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameWindow::askForPlayerName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Retrieves player name from QLineEdit </p>
+
+</div>
+</div>
 <a id="a30f9a105a0dabbb5c28c7f82632dec2c" name="a30f9a105a0dabbb5c28c7f82632dec2c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a30f9a105a0dabbb5c28c7f82632dec2c">&#9670;&nbsp;</a></span>createLabels()</h2>
 
@@ -216,7 +238,25 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Creates initial labels. </p>
+<p >Creates initial QLabels. </p>
+
+</div>
+</div>
+<a id="a569cedbfda5f467d554aeacd6b93648b" name="a569cedbfda5f467d554aeacd6b93648b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a569cedbfda5f467d554aeacd6b93648b">&#9670;&nbsp;</a></span>endGame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameWindow::endGame </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Ends all games by disaspearing all items in window. </p>
 
 </div>
 </div>
@@ -258,6 +298,25 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a0ee870824cd5d5585d5d1dab61d273a9" name="a0ee870824cd5d5585d5d1dab61d273a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ee870824cd5d5585d5d1dab61d273a9">&#9670;&nbsp;</a></span>getOtherPlayers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; <a class="el" href="classBlock.html">Block</a> * &gt; &amp; GameWindow::getOtherPlayers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Returns vector with all players except current.</p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
 <a id="afd24d4ce4380954bb4c913aa6859440d" name="afd24d4ce4380954bb4c913aa6859440d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afd24d4ce4380954bb4c913aa6859440d">&#9670;&nbsp;</a></span>getPlayerBar()</h2>
 
@@ -292,6 +351,25 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >Returns surprise label.</p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="abb28feb557c00ef07f4082c3067c44b1" name="abb28feb557c00ef07f4082c3067c44b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb28feb557c00ef07f4082c3067c44b1">&#9670;&nbsp;</a></span>isWon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameWindow::isWon </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Sets game winning stage.</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
@@ -414,6 +492,26 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a9251cfb7aa4a75e95a835393d1f54cc5" name="a9251cfb7aa4a75e95a835393d1f54cc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9251cfb7aa4a75e95a835393d1f54cc5">&#9670;&nbsp;</a></span>setWon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameWindow::setWon </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>won</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Sets game winning stage.</p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
 <a id="a43b1f9fd920d6ceb7284f1f15c5e4958" name="a43b1f9fd920d6ceb7284f1f15c5e4958"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a43b1f9fd920d6ceb7284f1f15c5e4958">&#9670;&nbsp;</a></span>start()</h2>
 
@@ -445,7 +543,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="GameWindow_8h_source.html#l00055">55</a> of file <a class="el" href="GameWindow_8h_source.html">GameWindow.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="GameWindow_8h_source.html#l00057">57</a> of file <a class="el" href="GameWindow_8h_source.html">GameWindow.h</a>.</p>
 
 </div>
 </div>

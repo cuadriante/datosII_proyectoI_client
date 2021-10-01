@@ -1,10 +1,6 @@
 //
 // Created by cuadriante on 19/9/21.
 //
-
-#ifndef DATOSII_PROYECTOI_SERVER_COMMAND_H
-#define DATOSII_PROYECTOI_SERVER_COMMAND_H
-
 /** @brief Command class used for communication between server and socket.
 
     Sets methods and constants necessary for communication between server and socket.
@@ -12,8 +8,15 @@
     @date September 2021
     */
 
+#ifndef DATOSII_PROYECTOI_SERVER_COMMAND_H
+#define DATOSII_PROYECTOI_SERVER_COMMAND_H
+
+
+
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree//json_parser.hpp>
+
+
 
 
 using boost::property_tree::ptree;
