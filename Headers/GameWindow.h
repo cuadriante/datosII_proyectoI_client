@@ -45,6 +45,7 @@ private:
     QLabel * surpriseLabel; /**<initial surprise label*/
     QLabel * titleLabel; /**<initial title label*/
     QLabel * playerLabel; /**<initial player label*/
+    QLabel * blankLabel;
     QString playerName; /**<initial player name string*/
     int totalPoints = 0; /**<initial total points*/
     int depthLevel = 0; /**<initial depth level*/

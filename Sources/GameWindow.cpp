@@ -14,6 +14,8 @@ GameWindow::GameWindow(QWidget *parent) : QGraphicsView(parent) {
     scene = new QGraphicsScene(0,0,600,600);
     setScene(scene);
     this->setWindowTitle("Crazy Breakout");
+    this->setStyleSheet("background-color:rgb(225, 170, 199);");
+
 
 }
 
@@ -58,6 +60,7 @@ void GameWindow::askForPlayerName() {
     font.setPointSize(30);
     font.setBold(true);
     titleLabel->setFont(font);
+    titleLabel->setStyleSheet("QLabel { color : rgb(100, 0, 58); }");
     titleLabel->setAlignment(Qt::AlignCenter);
     titleLabel->setGeometry(132, 100, 350, 100);
     titleLabel->setVisible(true);
@@ -65,6 +68,7 @@ void GameWindow::askForPlayerName() {
     nameTextInput = new QLineEdit(this);
     nameTextInput->setAlignment(Qt::AlignCenter);
     nameTextInput->setPlaceholderText("Player name");
+    nameTextInput->setStyleSheet("color : white;");
     nameTextInput->setMaxLength(20);
     nameTextInput->setGeometry(240, 250, 120, 25);
     nameTextInput->setVisible(true);
@@ -73,19 +77,33 @@ void GameWindow::askForPlayerName() {
     nameInputButton->setGeometry(266, 290, 70, 25);
     nameInputButton->setText("PLAY");
     nameInputButton->setVisible(true);
-    //QObject::connect(nameInputButton, SIGNAL(clicked()), this, SLOT(clickedSlot()));
+    nameInputButton->setStyleSheet("color: white;");
     connect(nameInputButton, SIGNAL(clicked()), this, SLOT(clickedSlot()));
 }
 
 void GameWindow::createLabels() {// create points pointsLabel
+
+
+
+    // create player name label
+    playerLabel = new QLabel(this);
+    playerLabel->setText("Player: " + playerName);
+    playerLabel->setAlignment(Qt::AlignBottom | Qt::AlignLeft);
+    playerLabel->setStyleSheet("color: white;");
+    playerLabel->setGeometry(470, 420, 100, 100);
+    playerLabel->setVisible(true);
+
     pointsLabel = new QLabel(this);
-    pointsLabel->setText("Points: 0");
+    pointsLabel->setStyleSheet("color: white;");
+    pointsLabel->setText("Score: 0");
     pointsLabel->setAlignment(Qt::AlignBottom | Qt::AlignLeft);
     pointsLabel->setGeometry(470, 400, 100, 100);
     pointsLabel->setVisible(true);
 
+    // create player name label
     // create depth level label
     depthLabel = new QLabel(this);
+    depthLabel->setStyleSheet("color: white;");
     depthLabel->setText("Depth Level: 0");
     depthLabel->setAlignment(Qt::AlignBottom | Qt::AlignLeft);
     depthLabel->setGeometry(470, 380, 110, 100);
@@ -95,14 +113,10 @@ void GameWindow::createLabels() {// create points pointsLabel
     surpriseLabel = new QLabel(this);
     surpriseLabel->setText("Surprise !!");
     surpriseLabel->setAlignment(Qt::AlignBottom | Qt::AlignLeft);
+    surpriseLabel->setStyleSheet("color: white;");
     surpriseLabel->setGeometry(470, 360, 100, 100);
 
-    // create player name label
-    playerLabel = new QLabel(this);
-    playerLabel->setText("Player: " + playerName);
-    playerLabel->setAlignment(Qt::AlignBottom | Qt::AlignLeft);
-    playerLabel->setGeometry(470, 420, 100, 100);
-    playerLabel->setVisible(true);
+
 }
 
 void GameWindow::addBlock(int id, int x, int y, int type, int hitsToBreak) {
@@ -142,17 +156,20 @@ void GameWindow::setScoreLabel(int score) {
     string text = to_string(totalPoints);
     const QString& qString= text.c_str();
     pointsLabel->setText("Score: " + qString);
+    //pointsLabel->setStyleSheet("color: RGB 255, 255, 255;");
     pointsLabel->setVisible(true);
 }
 
 void GameWindow::setDepthLabel(int depthLevel) {
     string text = to_string(depthLevel);
     const QString& qString= text.c_str();
+    //depthLabel->setStyleSheet("color: white;");
     depthLabel->setText("Depth Level: " + qString);
     depthLabel->setVisible(true);
 }
 
 void GameWindow::setSurpriseLabel(){
+    //surpriseLabel->setStyleSheet("color: white;");
     surpriseLabel->setVisible(true);
 }
 
