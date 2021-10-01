@@ -14,7 +14,8 @@ GameWindow::GameWindow(QWidget *parent) : QGraphicsView(parent) {
     scene = new QGraphicsScene(0,0,600,600);
     setScene(scene);
     this->setWindowTitle("Crazy Breakout");
-    this->setStyleSheet("background-color:rgb(225, 170, 199);");
+    this->setStyleSheet("background-color:black;");
+    //this->setStyleSheet("background-color:rgb(225, 170, 199);");
 
 
 }
@@ -60,7 +61,7 @@ void GameWindow::askForPlayerName() {
     font.setPointSize(30);
     font.setBold(true);
     titleLabel->setFont(font);
-    titleLabel->setStyleSheet("QLabel { color : rgb(100, 0, 58); }");
+    titleLabel->setStyleSheet("QLabel { color : white; }");
     titleLabel->setAlignment(Qt::AlignCenter);
     titleLabel->setGeometry(132, 100, 350, 100);
     titleLabel->setVisible(true);

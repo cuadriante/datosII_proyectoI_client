@@ -26,28 +26,39 @@ void Block::setType(int type) {
     Command c;
     switch(type){
         case c.BLOCK_TYPE_COMMON:{
-                brush.setColor(QColor(255,229,243));
+            //brush.setColor(Qt::lightGray);
+            brush.setColor(Qt::gray);
+            //brush.setColor(QColor(255,229,243));
             break;
         }
         case c.BLOCK_TYPE_DOUBLE:{
-            brush.setColor(QColor(239,187,215));
+            brush.setColor(Qt::blue);
+            //brush.setColor(Qt::gray);
+            //brush.setColor(QColor(239,187,215));
             break;
         }
         case c.BLOCK_TYPE_TRIPLE:{
-            brush.setColor(QColor(206,119,166));
+            brush.setColor(Qt::darkBlue);
+            //brush.setColor(QColor(206,119,166));
             break;
         }
         case c.BLOCK_TYPE_INTERNAL:{
-            brush.setColor(QColor(149,70,112));
+            brush.setColor(Qt::darkCyan);
+            //brush.setColor(QColor(149,70,112));
             break;
         }
         case c.BLOCK_TYPE_DEEP:{
-            brush.setColor(QColor(98,14,59));
+            brush.setColor(Qt::cyan);
+            //brush.setColor(QColor(98,14,59));
             break;
         }
         case c.BLOCK_TYPE_SURPRISE:{
-            brush.setColor(QColor(226,70,153));
+            brush.setColor(Qt::magenta);
+            //brush.setColor(QColor(226,70,153));
             break;
+        }
+        case 0:{
+            brush.setColor(Qt::darkGray);
         }
 
     }

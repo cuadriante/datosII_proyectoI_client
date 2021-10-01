@@ -52,10 +52,7 @@ void GameLoop::loop() {
                 int id = c->getId();
                 while (id >= gameWindow->getOtherPlayers().size()){
                     Block * otherPlayerBar = new Block();
-                    QBrush brush;
-                    brush.setStyle(Qt::SolidPattern);
-                    brush.setColor(Qt::white);
-                    setBrush(brush);
+                    otherPlayerBar->setType(0);
                     gameWindow->getOtherPlayers().push_back(otherPlayerBar);
                     gameWindow->scene->addItem(otherPlayerBar);
                 }
